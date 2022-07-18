@@ -1,0 +1,19 @@
+
+
+:root {
+   --default-background: #001135;
+   --default-font-family: 'Kdam Thmor Pro', sans-serif;
+   --default-font-color: #eeffff;
+}
+
+.index {
+    background: var(--default-background);
+    font-family: var(--default-font-family);
+   color: var(--default-font-color);
+}
+
+.box {
+    position: relative;
+    display: inline-block;
+    background-color: var(--default-font-color);
+}
