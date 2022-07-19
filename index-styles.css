@@ -6,7 +6,8 @@
     grid-template-rows: max-content;
     width: 100vw;
     height: 50vh;
-    margin-left: 20%;
+    margin-left: 18%;
+    margin-top: 10%;
 }
 
 .box {
