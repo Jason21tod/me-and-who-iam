@@ -1,19 +1,26 @@
 .index__head {
-    padding: 5%;
-    margin-top: 20%;
-    margin-left: 19%;
     align-items: center;
+    align-content: center;
     position: relative;
-    display: inline-block;
-    width: 50%;
-    height: 100%;
+    display: grid;
+    grid-template-rows: max-content;
+    width: 100vw;
+    height: 50vh;
+    margin-left: 20%;
 }
 
 .box {
     align-self: center;
-    width: 25%;
-    height: 60%;
-    padding: 70%;
+    height: 40vh;
+    width: 30vh;
+    padding: 10%;
+    border-radius: 20px;
+}
+
+.box__profile {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 .index__head h1 {
