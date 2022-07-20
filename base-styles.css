@@ -20,7 +20,6 @@ html {
 .box {
     position: relative;
     display: inline-block;
-    background-color: var(--default-font-color);
 }
 .default-text {
     font-family: var(--default-font-family);
