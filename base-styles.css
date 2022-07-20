@@ -6,6 +6,11 @@
    --default-font-color: #eeffff;
 }
 
+html {
+    height: auto;
+    width: auto;
+}
+
 .index {
     background: var(--default-background);
     font-family: var(--default-font-family);
@@ -16,4 +21,9 @@
     position: relative;
     display: inline-block;
     background-color: var(--default-font-color);
+}
+.default-text {
+    font-family: var(--default-font-family);
+    font: 400;
+    color: var(--default-font-color);
 }
