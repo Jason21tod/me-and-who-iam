@@ -20,13 +20,13 @@
     height: 60vh;
     width: 100%;
     background-color: aliceblue;
-    border-radius: 360px;
+    border-radius: 15px;
 }
 
 .index__title {
     display: flexbox;
     font-size: 30px;
-    margin:10% 0% 0% 10%;
+    margin:10% 0% 0% 17%;
 }
 
 .index__legend_box {
