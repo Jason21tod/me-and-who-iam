@@ -1,0 +1,7 @@
+.profile_head {
+    position: relative;
+    background-color: #001135;
+    height: 100vh;
+    width: 100vh;
+    display: inline-block;
+}

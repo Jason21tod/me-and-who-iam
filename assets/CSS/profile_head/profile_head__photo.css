@@ -1,0 +1,14 @@
+.profile_head__photo {
+    position: relative;
+    display: block;
+    background-color: whitesmoke;
+    height: 30%;
+    width: 20%;
+}
+
+.profile_head__photo--profile {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
