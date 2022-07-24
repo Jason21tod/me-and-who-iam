@@ -5,4 +5,7 @@
     width: 100vw;
     display: inline-block;
     align-items: center;
+    background-image: url('../../imgs/background-diagonal-bars.png');
+    background-repeat: no-repeat;
+    background-size: 150%;
 }
