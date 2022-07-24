@@ -9,5 +9,10 @@
     background-color: black;
     padding: 5%;
     margin: 5%;
-    border-radius: 15px ;
+    border-radius: 15px;
+    transition-duration: 1s;
+}
+
+.profile_head__description:hover {
+    box-shadow: 10px 5px 10px black;
 }

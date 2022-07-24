@@ -9,6 +9,12 @@
     border-radius: 20px;
     padding: 1.5%;
     margin: 10% 18%;
+    opacity: 100%;
+    transition-duration: 2s;
+}
+
+.profile_head__photo:active {
+    opacity: 0%;
 }
 
 .profile_head__photo--profile {
