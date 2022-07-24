@@ -1,6 +1,10 @@
 .profile_head__tittle {
-    display: inline-block;
+    display: block;
     font-family: 'Kdam Thmor', sans-serif;
+    font-weight: 450;
+    font-stretch: semi-expanded;
     color: aliceblue;
     font-size: 48px;
+    margin: 1.1% 14%;
+    padding: 1.3%;
 }
