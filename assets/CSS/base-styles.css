@@ -3,7 +3,4 @@
     --base-font: var('Kdam Thmor' sans-serif);
 }
 
-.base_background {
-    background-color: var(--base-color);
-    font-family: 'Kdam Thmor' sans-serif;
-}
+

@@ -1,4 +1,7 @@
 .profile_head__description {
     color: aliceblue;
     font-family: 'Kdam Thmor', sans-serif;
+    position: relative;
+    display: inline-block;
+    align-items: center;
 }

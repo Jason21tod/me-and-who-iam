@@ -1,4 +1,5 @@
 .profile_head__tittle {
+    display: inline-block;
     font-family: 'Kdam Thmor', sans-serif;
     color: aliceblue;
     font-size: 48px;
