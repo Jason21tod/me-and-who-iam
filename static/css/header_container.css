@@ -55,6 +55,7 @@
 
     to {
         background-color: aqua;
+        box-shadow: aqua 0px 0px 10px;
     }
 }
 
