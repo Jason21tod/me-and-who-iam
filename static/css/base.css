@@ -1,6 +1,9 @@
 :root {
     --background-image: url('../background-diagonal-bars.png');
 
+    --font-family-default: 'Kdam Thmor Pro', sans-serif;
+    --font-color-default: aqua;
+
     --background-blue: #000028;
-    --background-conteiner-blue: #000045;
+    --background-container-blue: #000045;
 } 

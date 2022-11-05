@@ -12,18 +12,20 @@
 
 .main_navigation a {
     display: inline-block;
-    font-family: "Kdam Thmor pro", sans-serif;
+    font-family: var(--font-family-default);
     text-decoration: none;
     color: aqua;
     margin-top: 1.5%;
     padding: 3%;
-    background-color: var(--background-conteiner-blue);
+    text-shadow: rgba(0, 255, 255, 0.5) 2px 2px 5px;
+    background-color: var(--background-container-blue);
     transition: 1.5s;
 }
 
 .main_navigation a:hover {
     box-shadow: rgba(0, 255, 255, 0.5) 5px 5px 15px;
+    text-shadow: rgba(75, 255, 255, 0.5) 2px 2px 5px;
     scale: 1.3;
-    background-color: aqua;
-    color: var(--background-conteiner-blue);
+    background-color: var(--font-color-default);
+    color: var(--background-container-blue);
 }

@@ -6,6 +6,7 @@
     background-image: var(--background-image);
     background-color: var(--background-blue);
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: 100%;
     height: 100vh;
 }
@@ -15,8 +16,25 @@
     font-size: 2.6em;
     color: aquamarine;
     font-family: "Kdam Thmor pro", sans-serif;
+    font-weight: 600;
     text-align: center;
+    animation: infinite;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-name: change-tittle;
 }
+
+@keyframes change-tittle {
+    from {
+      color: aqua;
+      text-shadow: aqua 0px 0px 5px;
+    }
+  
+    to {
+      color: aquamarine;
+    }  
+}
+
 
 .header_container__image {
     display: inline-block;
@@ -27,12 +45,23 @@
     background-color: var(--background-blue);
     border-radius: 10px;
     justify-content: center;
+    animation: background_shine 3s infinite alternate;
+}
+
+@keyframes background_shine {
+    from {
+        background-color: var(--background-blue);
+    }
+
+    to {
+        background-color: aqua;
+    }
 }
 
 .header_container__legend_box {
     display: flex;
     color: aquamarine;
-    background-color: var(--background-conteiner-blue);
+    background-color: var(--background-container-blue);
     height: 12%;
     width: 35%;
     padding: 5%;
