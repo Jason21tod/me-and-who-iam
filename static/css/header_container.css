@@ -20,7 +20,7 @@
     text-align: center;
     animation: infinite;
     animation-direction: alternate;
-    animation-duration: 3s;
+    animation-duration: 1.5;
     animation-name: change-tittle;
 }
 
