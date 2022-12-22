@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Skills</title>
+
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/reset.css">
+
+    <link rel="stylesheet" href="static/css/skills/skills_header.css">
+
+    <script src="https://kit.fontawesome.com/22fdd1afad.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+    <header class="skills_header">
+        <h1>Competências</h1>
+
+        <button class="skills_legend__container_icon"
+            onclick="toggleDescription();", value="NO">
+                <i class="fa-solid fa-circle-exclamation">
+                </i>
+        </button>
+
+        <div class="skills_legend__container"
+        style="display: flex;
+        visibility: hidden;
+        transition-duration: 1.6s;
+        transition-timing-function: ease-in-out;">
+            <p>
+                Segue a baixo uma parte das coisas que eu sou capaz,
+                apesar de que sempre estou estudando novas coisas.
+            </p>
+        </div>
+        
+    </header>
     
+    <main>
+    </main>
+
+    <footer>
+    </footer>
 </body>
+<script src="index.js"></script>
 </html>

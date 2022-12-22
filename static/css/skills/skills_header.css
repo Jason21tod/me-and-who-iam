@@ -1,0 +1,79 @@
+@import url(../base.css);
+
+
+body {
+    background-image: linear-gradient(200deg, var(--background-blue) , black );
+    font-family: var(--font-family-default);
+    height: 100vh;
+    width: 100vw;
+}
+
+.skills_header {
+    background-color: transparent;
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 20px;
+}
+
+.skills_header h1 {
+    margin-top: 10%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    align-items: center;
+}
+
+.skills_legend__container_icon {
+    display: inline-block;
+    color: rgb(1, 0, 82);
+    padding: 3%;
+    margin: 5%;
+    border-radius: 80%;
+    border-style: none;
+    width: 10%;
+    align-self: center;
+    animation: icon_light 3s infinite alternate;
+    transition: 1s;
+}
+
+.skills_legend__container_icon:active{
+    color: black;
+    background-color: white;
+}
+
+@keyframes icon_light {
+    from {
+        background-image: linear-gradient(to left, transparent, #00ffff69, 50%);
+    }
+
+    13% {
+        background-color: #00ffff69
+    }
+
+    20% {
+        background-color: #00ffff;
+        box-shadow: #00ffff 0px 0px 15px 0px;
+    }
+
+    13% {
+        background-color: #00ffff69
+    }
+
+    to {
+        background-image: linear-gradient(to right, transparent, #00ffff69, 50%);
+    }
+}
+
+.skills_legend__container {
+    display: flex;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    padding: 5%;
+    margin: 5%;
+}
+
+
+
+
