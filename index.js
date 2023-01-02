@@ -13,10 +13,14 @@ function toggleDescription () {
     if (description.style['visibility'] === 'visible') {
         console.log('desligado');
         description.style['visibility'] ='hidden';
+        description.style['opacity'] = '0%';
+        description.style['margin-bottom'] = '-10%';
         
     } else if (description.style['visibility'] === 'hidden') {
-        console.log('desligado');
+        console.log('ligado');
         description.style['visibility'] = 'visible';
-        description.style['background-color'] = 'blue';
+        description.style['background-color'] = '#000045';
+        description.style['opacity'] = '100%';
+        description.style['margin-bottom'] = '10%';
     }
 }

@@ -22,7 +22,9 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
     align-items: center;
+    animation: page-tittle infinite reverse linear;
 }
+
 
 .skills_legend__container_icon {
     display: inline-block;
@@ -70,10 +72,43 @@ body {
     align-self: center;
     text-align: center;
     align-items: center;
-    padding: 5%;
-    margin: 5%;
+    padding: 7%;
+    margin: 0% 15% 0%;
+    border-radius: 25%;
+    font-weight: 400;
 }
 
+.header_container__legend_box {
+    background-color: var(--background-container-blue);
+    scroll-snap-type: proximity;
+}
 
+.projects_list {
+    color: var(--font-color-default);
+    display: grid;
+    row-gap: 7%;
+    text-align: center;
+    align-items: center;
+}
+
+.projects_list h2 {
+    margin-bottom: 6.5%;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.projects_toggle_infos {
+    display: grid;
+    background-color: var(--background-container-blue);
+    margin: 0% 8%;
+    padding: 7%;
+    border-radius: 5%;
+    transition: 1s;
+}
+
+.projects_toggle_infos:hover {
+    transform: scale(120%);
+}
 
 
