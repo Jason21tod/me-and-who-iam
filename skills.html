@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills</title>
 
@@ -22,15 +21,12 @@
         <button class="skills_legend__container_icon"
             onclick="toggleDescription();", value="NO">
                 <i class="fa-solid fa-circle-exclamation">
+                    
                 </i>
+                <p>Ajuda</p>
         </button>
 
-        <div class="skills_legend__container"
-        style="
-        visibility: hidden;
-        transition-duration: 1.6s;
-        transition-timing-function: ease-in-out;
-        margin-bottom: -10%;">
+        <div class="skills_legend__container">
             <p>
                 Segue a baixo uma parte das coisas que eu construí. <br>
                 Qualquer dúvida, clique pra ver uma descrição mais expandida
@@ -42,7 +38,7 @@
         <main>
             <ul class="projects_list">
                 <li>
-                    <div class="projects_toggle_infos">
+                    <div class="projects_toggle_infos" id="jason_wpp" onclick="toggleJasonWpp()">
                         <h2>Jason WhatsAppBot</h2>
                         <p>
                             Um projeto que eu criei utilizando
@@ -50,14 +46,15 @@
                         </p>
                     </div>
                 </li>
-                <div class="projects_toggle_infos">
-                    <h2>O portifólio</h2>
-
-                    <p>
-                        O próprio portifólio foi criado usando o basico do frontend:
-                         css, javascript e html.
-                    </p>
-                </div>
+                <li>
+                    <div class="projects_toggle_infos" id="portolio">
+                        <h2>O portifólio</h2>
+                        <p>
+                            O próprio portifólio foi criado usando o basico do frontend:
+                            css, javascript e html.
+                        </p>
+                    </div>
+                </li>
             </ul>
                 
     </main>

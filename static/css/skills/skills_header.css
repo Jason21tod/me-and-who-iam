@@ -22,18 +22,21 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
     align-items: center;
-    animation: page-tittle infinite reverse linear;
+    animation: page-tittle infinite linear;
 }
 
 
 .skills_legend__container_icon {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: rgb(1, 0, 82);
-    padding: 3%;
+    font-weight: 400;
+    padding: 5%;
     margin: 5%;
-    border-radius: 80%;
+    border-radius: 40%;
     border-style: none;
-    width: 10%;
+    width: 20%;
     align-self: center;
     animation: icon_light 3s infinite alternate;
     transition: 1s;
@@ -76,11 +79,14 @@ body {
     margin: 0% 15% 0%;
     border-radius: 25%;
     font-weight: 400;
+    visibility: hidden;
+    transition-duration: 1.6s;
+    transition-timing-function: ease-in-out;
+    margin-bottom: -10%;
 }
 
 .header_container__legend_box {
     background-color: var(--background-container-blue);
-    scroll-snap-type: proximity;
 }
 
 .projects_list {
@@ -109,6 +115,16 @@ body {
 
 .projects_toggle_infos:hover {
     transform: scale(120%);
+    fill-opacity: 50%;
+    background-color: url(../jason.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jason_image {
+    shape-image-threshold: 50% #00ffff;
+    size: 100%;
+    scale: 120%;
 }
 
 
