@@ -5,10 +5,19 @@ console.log(description);
 var description = description.item(0);
 console.log(description);
 
+
+var jason_link = document.getElementsByClassName('jason_link');
+var jason_link = jason_link[0];
+
+
 description.style['visibility'] ='hidden';
 description.style['opacity'] = '0%';
 description.style['margin-bottom'] = '-10%';
 
+jason_link.style['display'] = 'none'
+jason_link.style['visibility'] = 'hidden';
+jason_link.style['opacity'] = '0%';
+description.style['margin-bottom'] = '-10%';
 
 function toggleDescription () {
     
@@ -32,13 +41,21 @@ function toggleDescription () {
 
 
 function toggleJasonWpp () {
-    var jason_image = document.getElementById('jason_wpp');
+    console.log(jason_link);
+    console.log(jason_link.style);
 
-    if (jason_image.innerHTML.endsWith('<a class="jason_link" href="#"><img class="jason_image" src="static/css/jason.png" alt="jason logo"></a>')) {
-        var jason_link = jason_image.getElementsByClassName('jason_link');
-        jason_link.item(0).remove();
+    if (jason_link.style['display'] === 'none') { 
+        jason_link.style['display'] = 'flex';
+        jason_link.style['visibility'] = 'visible';
+        description.style['background-color'] = 'transparent'
+        jason_link.style['opacity'] = '100%';
+        jason_link.style['margin-bottom'] = '10%';
+
+    } else if (jason_link.style['display'] === 'flex') {
+        jason_link.style['display'] = 'none';
+        jason_link.style['visibility'] = 'hidden';
+        description.style['background-color'] = 'transparent';
+        jason_link.style['opacity'] = '0%';
+        jason_link.style['margin-bottom'] = '-10%';
     }
-    else {
-        jason_image.insertAdjacentHTML("beforeend", '<a class="jason_link" href="#"><img class="jason_image" src="static/css/jason.png" alt="jason logo"></a>');
-    };
 }

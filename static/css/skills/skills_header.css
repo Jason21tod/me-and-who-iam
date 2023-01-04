@@ -121,10 +121,21 @@ body {
     background-size: cover;
 }
 
+.jason_link {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    transition: 1s;
+}
+
 .jason_image {
-    shape-image-threshold: 50% #00ffff;
-    size: 100%;
-    scale: 120%;
+    display: flex;
+    transition: 1s;
+    align-self: center;
+    justify-self: center;
 }
 
 
