@@ -2,6 +2,7 @@
 
 
 body {
+    background-clip: content-box;
     background-image: linear-gradient(200deg, var(--background-blue) , black );
     font-family: var(--font-family-default);
     height: 100vh;
@@ -121,7 +122,7 @@ body {
     background-size: cover;
 }
 
-.jason_link {
+.jason_link, .portifolio_description {
     display: none;
     align-items: center;
     justify-content: center;
@@ -132,10 +133,9 @@ body {
 }
 
 .jason_image {
+    margin-bottom: 10%;
     display: flex;
     transition: 1s;
     align-self: center;
     justify-self: center;
 }
-
-
