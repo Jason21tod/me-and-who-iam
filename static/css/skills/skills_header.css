@@ -2,11 +2,21 @@
 
 
 body {
+    display: flex;
+    flex-direction: column;
     background-clip: padding-box;
     background-image: linear-gradient(200deg, var(--background-blue) , black );
     font-family: var(--font-family-default);
     height: max-content;
     width: 100vw;
+}
+
+footer{
+    position: relative;
+}
+
+em{
+    text-decoration: dashed;
 }
 
 .skills_header {
@@ -109,10 +119,16 @@ body {
 .projects_list {
     color: var(--font-color-default);
     list-style-type: none;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     row-gap: 7%;
     text-align: center;
     align-items: center;
+}
+
+.projects_list li {
+    margin-bottom: 20%;
+    width: 100%;
 }
 
 .projects_list h2 {
@@ -162,6 +178,10 @@ body {
     text-decoration: none;
     color: aliceblue;
     margin-top: 10%;
+}
+
+.books li{
+    margin-bottom: 2%;
 }
 
 .contact_container {
