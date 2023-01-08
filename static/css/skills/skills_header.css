@@ -183,24 +183,3 @@ em{
 .books li{
     margin-bottom: 2%;
 }
-
-.contact_container {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 30%;
-    column-gap: 5%;
-    justify-content: center;
-    position: relative;
-    color: #32ffff;
-    margin-bottom: 14%
-}
-
-.contact_item {
-    scale: 140%;
-    transition: 1s;
-    margin-bottom: 14%;
-}
-
-.contact_item:hover {
-    box-shadow: #00ffff 0px 0px 5px 0px;
-}

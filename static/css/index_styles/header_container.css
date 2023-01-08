@@ -46,7 +46,7 @@
     background-color: var(--background-blue);
     border-radius: 10px;
     justify-content: center;
-    animation: background_shine 3s infinite alternate;
+    animation: background_shine 3s alternate;
 }
 
 @keyframes background_shine {
@@ -72,4 +72,25 @@
     font-family: "Kdam Thmor pro";
     align-items: center;
     text-align: center;
+}
+
+.skills_link_container {
+    border-radius: 15px;
+}
+
+.skills_link {
+    border-radius: 10px;
+    padding: 10%;
+    transition: 1s;
+    animation: skills_link 0.7s infinite alternate;
+}
+
+@keyframes skills_link {
+    from {
+        color: aqua;
+    }
+
+    to {
+        color: aliceblue;
+    }
 }
