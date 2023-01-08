@@ -94,3 +94,8 @@
         color: aliceblue;
     }
 }
+
+footer {
+    background-image: linear-gradient(-200deg, var(--background-blue) , black 90%);
+
+}
