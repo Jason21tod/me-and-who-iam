@@ -10,7 +10,7 @@ def index():
     return render_template('index.html')
 
 def run_app():
-    return app
+    return app.run()
 
 if __name__ == '__main__':
     app.run()
