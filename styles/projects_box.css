@@ -1,0 +1,20 @@
+.projects_box {
+    background: linear-gradient(240deg, var(--background-default-color), 50%, black);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    height: 100vh;
+}
+
+
+.project_box-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.project_box-item-box {
+    background-color: var(--aqua-default);
+    border-radius: 15px;
+}

@@ -1,0 +1,75 @@
+:root {
+    --font-default: 'Kdam Thmor', sans-serif;
+    --aqua-default: #00D1FF;
+    --background-default-color: #010033;
+    --font-color-default: #8AEAFF;
+    --box-background: #08005F;
+}
+
+body {
+    font-family: var(--font-default);
+    color: var(--font-color-default);
+    background-color: var(--background-default-color);
+}
+
+.header_container {
+    background-color: var(--background-default-color) ;
+    background-image: url(Untitled.png);
+    background-repeat: repeat;
+    background-position: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    row-gap: 20px;
+}
+
+.header_container h1 {
+    color: var(--font-color-default);
+    margin: 10% 0%;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.header_container-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+/* ALTERAR ESSA PARTE DPS quando tivermos imagens */
+.header_container-box img {
+    background-color: var(--aqua-default);
+    width: 217px;
+    height: 291px;
+    left: 72px;
+    top: 105px;
+    
+    background: #00D1FF;
+    border-radius: 15px;
+}
+
+.contact_box {
+    display: flex;
+    color: var(--font-color-default);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 10%;
+    text-decoration: none;
+}
+
+.legend_container-box {
+    align-items: center;
+    font-size: 1.2em;
+    background-color: var(--box-background);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    margin: 16% 10% 0% 10%;
+    padding: 7%;
+    border-radius: 15px;
+    text-align: center;
+}
