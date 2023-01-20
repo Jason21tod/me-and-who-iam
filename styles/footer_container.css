@@ -1,0 +1,22 @@
+.footer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(320deg, var(--background-default-color), 40%, black);
+}
+
+.footer_container p {
+    padding: 0% 10%;
+}
+
+#footer_paraphrase {
+    margin-top: 10%;
+    font-size: 1.4em;
+}
+
+#footer_credits {
+    margin-top: 20%;
+    margin-bottom: 10%;
+}

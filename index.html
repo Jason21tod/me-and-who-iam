@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/header_container.css">
     <link rel="stylesheet" href="styles/main_container.css">
     <link rel="stylesheet" href="styles/projects_box.css">
+    <link rel="stylesheet" href="styles/footer_container.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,23 +60,37 @@
         <section class="projects_box">
             <h2 class="main_container-tittle">Projetos</h2>
             <p class="main_container-paragraph">Projetos de niveis variados mas que eu aprendi diversas coisas</p>
+            
             <nav class="project_box-navigation">
-                <div class="project_box-item-box">
+                <div class="project_box-item-box" id="jason_box">
                     <i>
-                        <a href=""><img src="styles/jason.png" alt="jason logo"></a>
+                        <img src="styles/jason.png" alt="jason logo">
                     </i>
                 </div>
-
                 <div class="project_box-item-box"><i>Meandwhoi</i></div>
                 <div> Em breve</div>
             </nav>
+            <div class="project_description_box">
+                <legend id="jason_description-legend">
+                    Jason é um sistema web criado para o Clara
+                    Resorts que integra diferentes skills como:
+                </legend>
+                <ul class="list_of_profits">
+                    <li>Criação de chatbots usando APIs do whatsapp;</li>
+                    <li>Obtenção de dados de cadastro e armazenamento;</li>
+                    <li>Integração contínua e conceitos de arquitetura de software;</li>
+                </ul>
+            </div>
         </section>
+
         <footer class="footer_container">
+            <p id="footer_paraphrase">Vamos trabalhar para construir seus objetivos ?</p>
             <nav class="contact_box">
                 <a href=""><i class="fa-brands fa-facebook fa-2x" ></i></a>
                 <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
                 <a href=""><i class="fa-brands fa-github fa-2x"></i></a>
             </nav>
+            <p id="footer_credits">Desenvolvido e idealizado por Gian Pereira Nunes</p>
         </footer>
     </main>
 
