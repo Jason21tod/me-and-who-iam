@@ -29,6 +29,25 @@ body {
     margin: 10% 0%;
     font-size: 2.5em;
     font-weight: 600;
+    transition: 2s;
+    animation: title_bright 3s alternate none 1 ;
+}
+
+
+@keyframes title_bright {
+    from{
+        text-shadow: #00D1FF 0px 0px 0px;
+    }
+
+    50% {
+        color: var(--font-color-default);
+        text-shadow: #8AEAFF 0px 0px 50px;
+        scale: 1.2;
+    }
+
+    to {
+        text-shadow: #00D1FF 0px 0px 0px;
+    }
 }
 
 .header_container-box {
@@ -49,6 +68,23 @@ body {
     
     background: #00D1FF;
     border-radius: 15px;
+    transition: ease-in-out;
+    animation: img_shine 3s alternate 1s 1 ;
+}
+
+@keyframes img_shine {
+    from{
+        box-shadow: #00D1FF 0px 0px 0px;
+    }
+
+    50% {
+        color: var(--font-color-default);
+        box-shadow: #8AEAFF 0px 0px 50px;
+    }
+
+    to {
+        box-shadow: #00D1FF 0px 0px 0px;
+    }
 }
 
 .contact_box {
@@ -72,4 +108,44 @@ body {
     padding: 7%;
     border-radius: 15px;
     text-align: center;
+}
+
+.shine {
+    right: 100%;
+    bottom: 0%;
+    rotate: 10deg;
+    align-self: inherit;
+    position: absolute;
+    height: 15%;
+    border-radius: 0px 15px 0px 25px;
+    width: 5%;
+    background-color: var(--font-color-default);
+    opacity: 00%;
+    box-shadow: var(--font-color-default) 0px 0px 20px;
+    transition: ease-in;
+    animation: shine_transition 0.5s alternate 2s 1;
+    z-index: 2;
+}
+
+@keyframes shine_transition {
+    from {
+        opacity: 00%;
+        right: 100%;
+    }
+
+
+
+    50% {
+        opacity: 100%;
+        right: 35%;
+        box-shadow: var(--font-color-default) 0px 0px 50px;
+        width: 10%;
+    }
+
+
+    to {
+        opacity: 00%;
+        right: -100%;
+        box-shadow: var(--font-color-default) 0px 0px 0px;
+    }
 }
