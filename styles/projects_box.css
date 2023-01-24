@@ -44,4 +44,5 @@
     margin-bottom: 3%;
     flex-direction: column;
     transition: 2s;
+    opacity: 0;
 }
