@@ -17,6 +17,11 @@
 .project_box-item-box {
     background-color: var(--aqua-default);
     border-radius: 15px;
+    transition: 1s;
+}
+
+.project_box-item-box:active {
+    background-color: blue;
 }
 
 .list_of_profits {
@@ -28,6 +33,15 @@
 .project_description_box {
     padding: 10%;
 }
+
+.project_description_box h2 {
+    font-size: 1.6em;
+    font-weight: 500;
+    margin-bottom: 5%;
+}
+
 #jason_description-legend {
     margin-bottom: 3%;
+    flex-direction: column;
+    transition: 2s;
 }

@@ -149,7 +149,7 @@ body {
     align-self: inherit;
     position: absolute;
     height: 15%;
-    border-radius: 0px 15px 0px 25px;
+    border-radius: 25px 0px 15px 0px;
     width: 5%;
     background-color: var(--font-color-default);
     opacity: 00%;
