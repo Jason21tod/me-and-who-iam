@@ -4,21 +4,25 @@ const ME_AND_WHO_IAM_BOX = document.getElementById('me_and_who_iam_description-l
 console.log(JASON_BOX);
 
 
-function alter_box_description(name) {
-    var box = document.getElementById(name);
+function alter_box_description(activation_box, description_box) {
+    var box = document.getElementById(activation_box);
+    var description = document.getElementById(description_box);
     console.log('obtendo -> ', box);
+    console.log('obtendo -> ', description);
 
-    console.log('Opacidade', JASON_BOX.style['opacity']);
-    if (JASON_BOX.style['opacity'] == '0') {
+    console.log('Opacidade', description.style['opacity']);
+    if (description.style['opacity'] == '0') {
         console.log('ligado');
         box.style['background'] = 'blue'
         box.style['scale'] = '1.2'
-        JASON_BOX.style['opacity'] = '100';
+        description.style['opacity'] = '100';
+        description.style['display'] = 'flex'
 
     } else {
         console.log('desligado');
         box.style['background'] = 'var(--aqua-default)'
         box.style['scale'] = '1'
-        JASON_BOX.style['opacity'] = '0';
+        description.style['opacity'] = '0';
+        description.style['display'] = 'none'
     }
 }

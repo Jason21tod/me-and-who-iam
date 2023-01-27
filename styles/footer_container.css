@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(320deg, var(--background-default-color), 40%, black);
+    background: linear-gradient(340deg, var(--background-default-color), 40%, black);
 }
 
 .footer_container p {

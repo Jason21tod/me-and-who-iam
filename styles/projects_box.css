@@ -1,48 +1,112 @@
-.projects_box {
-    background: linear-gradient(225deg, var(--background-default-color), 50%, black);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-content: center;
-    height: 100vh;
+@media screen and (max-width:720px) {
+    .projects_box {
+        background: linear-gradient(200deg, var(--background-default-color), 50%, black);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        padding: 8% 5% 0% 5%;
+    }
+
+
+    .project_box-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 13%;
+    }
+
+    .project_box-item-box {
+        background-color: var(--aqua-default);
+        border-radius: 15px;
+        transition: 1s;
+    }
+
+    .project_box-item-box:active {
+        background-color: blue;
+    }
+
+    .list_of_profits {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    .project_description_box {
+        background-color: transparent;
+    }
+
+    .project_description_box h2 {
+        font-size: 1.6em;
+        font-weight: 500;
+        margin-bottom: 5%;
+    }
+
+    #jason_description-legend, #me_and_who_iam_description-legend{
+        text-align: justify;
+        margin-bottom: 3%;
+        flex-direction: column;
+        padding: 5%;
+        transition: 2s;
+        border-radius: 15px;
+        opacity: 0;
+        background-color: var(--box-background);
+    }
 }
 
 
-.project_box-navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+@media screen and (max-width:420px){
+    
+    .projects_box {
+        background: linear-gradient(225deg, var(--background-default-color), 50%, black);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        height: 100vh;
+        padding: 8% 5% 10vh 5%;
+    }
 
-.project_box-item-box {
-    background-color: var(--aqua-default);
-    border-radius: 15px;
-    transition: 1s;
-}
 
-.project_box-item-box:active {
-    background-color: blue;
-}
+    .project_box-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-.list_of_profits {
-    display: flex;
-    flex-direction: column;
-    list-style: circle;
-}
+    .project_box-item-box {
+        background-color: var(--aqua-default);
+        border-radius: 15px;
+        transition: 1s;
+    }
 
-.project_description_box {
-    padding: 10%;
-}
+    .project_box-item-box:active {
+        background-color: blue;
+    }
 
-.project_description_box h2 {
-    font-size: 1.6em;
-    font-weight: 500;
-    margin-bottom: 5%;
-}
+    .list_of_profits {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
 
-#jason_description-legend {
-    margin-bottom: 3%;
-    flex-direction: column;
-    transition: 2s;
-    opacity: 0;
+    .project_description_box {
+        text-align: center;
+        padding: 5%;
+    }
+
+    .project_description_box h2 {
+        font-size: 1.6em;
+        font-weight: 500;
+        margin-bottom: 5%;
+    }
+
+    #jason_description-legend, #me_and_who_iam_description-legend{
+        margin-bottom: 3%;
+        flex-direction: column;
+        padding: 3%;
+        transition: 2s;
+        opacity: 0;
+        text-align: center;
+    }
 }

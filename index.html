@@ -19,20 +19,22 @@
     <title>Gian Pereira (Jason)</title>
 </head>
 <body>
+    <h1>Jason</h1>
     <header class="header_container">
         <div class="header_container-box">
-            <h1>Jason</h1>
             <img src="#" alt="Euzinho">
         </div>
-        <div class="legend_container-box">
-            <p>Precisa de uma solução ? Estou a seu dispôr</p>
+        <div id="legend_column">
+            <div class="legend_container-box">
+                <p>Precisa de uma solução ? Estou a seu dispôr</p>
+            </div>
+            <nav class="contact_box">
+                <a href=""><i id="facebook_icon" class="fa-brands fa-facebook fa-2x" ></i></a>
+                <a href=""><i id="linkedin_icon" class="fa-brands fa-linkedin fa-2x"></i></a>
+                <a href=""><i id="github_icon" class="fa-brands fa-github fa-2x"></i></a>
+                <span class="shine"></span>
+            </nav>
         </div>
-        <nav class="contact_box">
-            <a href=""><i id="facebook_icon" class="fa-brands fa-facebook fa-2x" ></i></a>
-            <a href=""><i id="linkedin_icon" class="fa-brands fa-linkedin fa-2x"></i></a>
-            <a href=""><i id="github_icon" class="fa-brands fa-github fa-2x"></i></a>
-            <span class="shine"></span>
-        </nav>
     </header>
 
     <main>
@@ -63,36 +65,52 @@
             <p class="main_container-paragraph">Projetos de niveis variados mas que eu aprendi diversas coisas</p>
             
             <nav class="project_box-navigation">
-                <div class="project_box-item-box" id="jason_box" onclick="alter_box_description('jason_box')">
+                <div class="project_box-item-box" id="jason_box" onclick="alter_box_description('jason_box', 'jason_description-legend')">
                     <i>
                         <img src="styles/jason.png" alt="jason logo">
                     </i>
                 </div>
-                <div class="project_box-item-box"><i>Meandwhoi</i></div>
+                <div class="project_box-item-box" id="me_and_who_iam_description" onclick= "alter_box_description('me_and_who_iam_description', 'me_and_who_iam_description-legend')">
+                    <i>Meandwhoi</i>
+                </div>
                 <div> Em breve</div>
             </nav>
             <div class="project_description_box">
-                <legend id="jason_description-legend">
+                <div class="project_description_box" id="jason_description-legend">
                     <h2>Jason Wpp Bot</h2>
-                    Jason é um sistema web criado para o Clara
-                    Resorts que integra diferentes skills como:
+                    <p>
+                        Jason é um sistema web criado para o Clara
+                        Resorts que integra diferentes skills como:
+                    </p>
                     <ul class="list_of_profits">
                         <li>Criação de chatbots usando APIs do whatsapp;</li>
                         <li>Obtenção de dados de cadastro e armazenamento;</li>
                         <li>Integração contínua e conceitos de arquitetura de software;</li>
                     </ul>
-                </legend>
+                </div>
+                <div class="project_description_box" id="me_and_who_iam_description-legend">
+                    <h2>Me and who iam</h2>
+                    <legend>
+                        Me and who iam é nome do projeto deste portifólio, e justamente oq
+                        nome diz: Uma forma de dizer "Eu e quem eu sou". A ideia nasceu da 
+                        base de que todos somos varias coisas, varios estados de nós mesmos.
+                        No instante que pensei nisso, pensei em fazer desse portifólio o local
+                        onde pude ver minha constante evolução na minha maior dificuldade: 
+                        o frontend, aqui você também pode acompanhar a minha evolução
+                    </legend>
+                    
+                </div>
             </div>
         </section>
 
         <footer class="footer_container">
             <p id="footer_paraphrase">Vamos trabalhar juntos para construir seus objetivos ?</p>
             <nav class="contact_box">
-                <a href=""><i class="fa-brands fa-facebook fa-2x" ></i></a>
-                <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-github fa-2x"></i></a>
+                <a href=""><i id="facebook_icon" class="fa-brands fa-facebook fa-2x" ></i></a>
+                <a href=""><i id="linkedin_icon" class="fa-brands fa-linkedin fa-2x"></i></a>
+                <a href=""><i id="github_icon" class="fa-brands fa-github fa-2x"></i></a>
             </nav>
-            <p id="footer_credits">Desenvolvido e idealizado por Gian Pereira Nunes</p>
+            <p id="footer_credits"> &copy;Desenvolvido e idealizado por Gian Pereira Nunes</p>
         </footer>
     </main>
     <script src="index.js"></script>
