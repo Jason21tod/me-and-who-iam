@@ -83,6 +83,7 @@ body {
     font-family: var(--font-default);
     color: var(--font-color-default);
     background-color: var(--background-default-color);
+    scroll-behavior: smooth;
 }
 
 

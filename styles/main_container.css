@@ -81,11 +81,14 @@
 @media screen and (max-width:460px) {
 
     main {
+        padding: 0%;
+        display: flex;
         height: 100vh;
-        background: linear-gradient(320deg, var(--background-default-color), 50%, black);
+        background: linear-gradient(360deg, var(--background-default-color), 70%, black);
     }
 
     .main_container {
+        background: transparent;        
         display: flex;
         flex-direction: column;
         gap: 20px;

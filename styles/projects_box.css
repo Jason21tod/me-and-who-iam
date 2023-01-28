@@ -116,7 +116,7 @@
 @media screen and (max-width:420px){
     
     .projects_box {
-        background: linear-gradient(225deg, var(--background-default-color), 50%, black);
+        background: transparent;
         display: flex;
         flex-direction: column;
         text-align: center;
