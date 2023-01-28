@@ -1,3 +1,45 @@
+@media screen and (max-width:1580px){
+    
+    main {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: flex-start;
+        height: 100vh;
+        gap:40px;
+        background: linear-gradient(360deg, var(--background-default-color), 50%, black);
+        padding: 4%;
+    }
+
+    .main_container {
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        text-align: center;
+        justify-content: flex-start;
+        align-content: center ;
+    }
+
+    .main_container-tittle {
+        margin-top: 30%;
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+
+
+    .main_container-paragraph {
+        background-color: var(--box-background);
+        padding: 7%;
+        border-radius: 15px;
+    }
+
+    .main_container .contact_box {
+        display: none;
+        animation: none;
+    }
+
+}
+
 @media screen and (max-width:720px) {
     main {
         height: 100vh;

@@ -85,6 +85,125 @@ body {
     background-color: var(--background-default-color);
 }
 
+
+@media screen and (max-width:1580px) {
+
+    .header_container {
+        display: grid;
+        background: url(Untitled.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-top: 5%;
+        height: 100vh;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 100px 20px;
+        column-width: 25%;
+    }
+
+    h1 {
+        color: var(--font-color-default);
+        background-color: #010033;
+        position: static;
+        padding: 3.5%;
+        font-size: 3.5em;
+        font-weight: 600;
+        transition: 2s;
+        animation: title_bright 3s alternate none 1 ;
+        align-self: center;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .header_container-box {
+        position: relative;
+        text-align: center;
+    }
+
+    .header_container-box img {
+        display: inline-block;
+        position: relative;
+        width: 268px;
+        height: 527px;
+
+        align-self: center;
+
+        background: #00D1FF;
+        border-radius: 15px;
+        transition: 2s;
+        animation: img_shine 3s alternate none 1s 1 ;
+    }
+
+    
+    #legend_column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10vh;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .legend_container-box {
+        background-color: var(--box-background);
+        padding: 7%;
+        font-size: 1.1em;
+        border-radius: 15px;
+        margin-bottom: 20%;
+    }
+
+    .contact_box {
+        display: flex;
+        color: var(--font-color-default);
+        align-items: center;
+        gap: 30px;
+        text-decoration: none;
+        margin-top: 0%;
+    }
+
+    .contact_box a i {
+        box-shadow: var(--font-color-default 0px 0px 30px);
+        position: relative;
+        scale: 1.5;
+    }
+
+    #facebook_icon {
+        color: aliceblue;
+        animation: icon-animation 1s alternate 3s 1;
+    }
+
+    #linkedin_icon {
+        color: #00D1FF;
+        animation: icon-animation 1s alternate 3.5s 1;
+    }
+
+    #github_icon {
+        color: var(--box-background);
+        animation: icon-animation 1s alternate 4s 1;
+    }
+
+    .shine {
+        right: 100%;
+        bottom: 30%;
+        rotate: 10deg;
+        align-self: inherit;
+        position: absolute;
+        height: 15%;
+        border-radius: 25px 0px 15px 0px;
+        width: 5%;
+        background-color: var(--font-color-default);
+        opacity: 00%;
+        box-shadow: var(--font-color-default) 0px 0px 20px;
+        transition: ease-in;
+        animation: shine_transition 0.5s alternate 2s 1;
+        z-index: 2;
+    }
+}
+
+
 @media screen and (max-width:720px){
     main {
         display: flex;
