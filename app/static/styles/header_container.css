@@ -1,0 +1,458 @@
+:root {
+    --font-default: 'Kdam Thmor', sans-serif;
+    --aqua-default: #00D1FF;
+    --background-default-color: #010033;
+    --font-color-default: #8AEAFF;
+    --box-background: #08005F;
+}
+
+
+@keyframes img_shine {
+    from{
+        box-shadow: #00D1FF 0px 0px 0px;
+    }
+
+    50% {
+        color: var(--font-color-default);
+        box-shadow: #8AEAFF 0px 0px 50px;
+    }
+
+    to {
+        box-shadow: #00D1FF 0px 0px 0px;
+    }
+}
+
+@keyframes title_bright {
+    from{
+        text-shadow: #00D1FF 0px 0px 0px;
+    }
+
+    50% {
+        color: var(--font-color-default);
+        text-shadow: #8AEAFF 0px 0px 50px;
+        scale: 1.2;
+    }
+
+    to {
+        text-shadow: #00D1FF 0px 0px 0px;
+    }
+}
+
+@keyframes shine_transition {
+    from {
+        opacity: 00%;
+        right: 100%;
+    }
+
+
+
+    50% {
+        opacity: 100%;
+        right: 35%;
+        box-shadow: var(--font-color-default) 0px 0px 50px;
+        width: 10%;
+    }
+
+
+    to {
+        opacity: 00%;
+        right: -100%;
+        box-shadow: var(--font-color-default) 0px 0px 0px;
+    }
+}
+
+@keyframes icon-animation {
+    from {
+        top: 10px;
+    }
+
+    50% {
+        top: -40px
+    }
+
+    to {
+        top: 10px;
+    }
+}
+
+
+body {
+    font-family: var(--font-default);
+    color: var(--font-color-default);
+    background-color: var(--background-default-color);
+    scroll-behavior: smooth;
+}
+
+
+@media screen and (max-width:1580px) {
+
+    .header_container {
+        display: grid;
+        background: url(Untitled.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-top: 5%;
+        height: 100vh;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 100px 20px;
+        column-width: 25%;
+    }
+
+    h1 {
+        color: var(--font-color-default);
+        background-color: #010033;
+        position: static;
+        padding: 3.5%;
+        font-size: 3.5em;
+        font-weight: 600;
+        transition: 2s;
+        animation: title_bright 3s alternate none 1 ;
+        align-self: center;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .header_container-box {
+        position: relative;
+        text-align: center;
+    }
+
+    .header_container-box img {
+        display: inline-block;
+        position: relative;
+        width: 268px;
+        height: 527px;
+
+        align-self: center;
+
+        background: #00D1FF;
+        border-radius: 15px;
+        transition: 2s;
+        animation: img_shine 3s alternate none 1s 1 ;
+    }
+
+    
+    #legend_column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10vh;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .legend_container-box {
+        background-color: var(--box-background);
+        padding: 7%;
+        font-size: 1.1em;
+        border-radius: 15px;
+        margin-bottom: 20%;
+    }
+
+    .contact_box {
+        display: flex;
+        color: var(--font-color-default);
+        align-items: center;
+        gap: 30px;
+        text-decoration: none;
+        margin-top: 0%;
+    }
+
+    .contact_box a i {
+        box-shadow: var(--font-color-default 0px 0px 30px);
+        position: relative;
+        scale: 1.5;
+    }
+
+    #facebook_icon {
+        color: aliceblue;
+        animation: icon-animation 1s alternate 3s 1;
+    }
+
+    #linkedin_icon {
+        color: #00D1FF;
+        animation: icon-animation 1s alternate 3.5s 1;
+    }
+
+    #github_icon {
+        color: var(--box-background);
+        animation: icon-animation 1s alternate 4s 1;
+    }
+
+    .shine {
+        right: 100%;
+        bottom: 30%;
+        rotate: 10deg;
+        align-self: inherit;
+        position: absolute;
+        height: 15%;
+        border-radius: 25px 0px 15px 0px;
+        width: 5%;
+        background-color: var(--font-color-default);
+        opacity: 00%;
+        box-shadow: var(--font-color-default) 0px 0px 20px;
+        transition: ease-in;
+        animation: shine_transition 0.5s alternate 2s 1;
+        z-index: 2;
+    }
+}
+
+
+@media screen and (max-width:720px){
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .header_container {
+        display: grid;
+        background: url(Untitled.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-top: 5%;
+        height: 100vh;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 40px 20px;
+        column-width: 50%;
+    }
+
+    h1 {
+        color: var(--font-color-default);
+        background-color: #010033;
+        position: static;
+        padding: 7%;
+        font-size: 3.5em;
+        font-weight: 600;
+        transition: 2s;
+        animation: title_bright 3s alternate none 1 ;
+        align-self: center;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .header_container-box {
+        position: relative;
+        text-align: center;
+    }
+
+    .header_container-box img {
+        display: inline-block;
+        position: relative;
+        width: 268px;
+        height: 527px;
+
+        align-self: center;
+
+        background: #00D1FF;
+        border-radius: 15px;
+        transition: 2s;
+        animation: img_shine 3s alternate none 1s 1 ;
+    }
+
+    #legend_column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10vh;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .legend_container-box {
+        background-color: var(--box-background);
+        padding: 10%;
+        font-size: 1.1em;
+        border-radius: 15px;
+        margin-bottom: 20%;
+    }
+
+    .contact_box {
+        display: flex;
+        color: var(--font-color-default);
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        text-decoration: none;
+        margin-top: 0%;
+    }
+
+    .contact_box a i {
+        box-shadow: var(--font-color-default 0px 0px 30px);
+        position: relative;
+        scale: 1.5;
+    }
+
+    #facebook_icon {
+        color: aliceblue;
+        animation: icon-animation 1s alternate 3s 1;
+    }
+
+    #linkedin_icon {
+        color: #00D1FF;
+        animation: icon-animation 1s alternate 3.5s 1;
+    }
+
+    #github_icon {
+        color: var(--box-background);
+        animation: icon-animation 1s alternate 4s 1;
+    }
+
+    .shine {
+        right: 100%;
+        bottom: 30%;
+        rotate: 10deg;
+        align-self: inherit;
+        position: absolute;
+        height: 15%;
+        border-radius: 25px 0px 15px 0px;
+        width: 5%;
+        background-color: var(--font-color-default);
+        opacity: 00%;
+        box-shadow: var(--font-color-default) 0px 0px 20px;
+        transition: ease-in;
+        animation: shine_transition 0.5s alternate 2s 1;
+        z-index: 2;
+    }
+
+
+    
+
+}
+
+
+@media screen and (max-width:460px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header_container {
+        background-color: var(--background-default-color) ;
+        background-image: url(Untitled.png);
+        background-repeat: repeat;
+        background-position: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        row-gap: 20px;
+        align-items: center;
+    }
+
+    h1 {
+        color: var(--font-color-default);
+        margin-top: 5%;
+        position: relative;
+        padding: 2%;
+        font-size: 2.5em;
+        font-weight: 600;
+        transition: 2s;
+        animation: title_bright 3s alternate none 1 ;
+    }
+
+
+    .header_container-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    /* ALTERAR ESSA PARTE DPS quando tivermos imagens */
+    .header_container-box img {
+        background-color: var(--aqua-default);
+        position: inherit;
+        width: 217px;
+        height: 351px;
+        
+        background: #00D1FF;
+        border-radius: 15px;
+        transition: ease-in-out;
+        animation: img_shine 3s alternate 1s 1 ;
+    }
+
+
+    .contact_box {
+        display: flex;
+        color: var(--font-color-default);
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 10%;
+        text-decoration: none;
+    }
+
+    .contact_box a i {
+        color: #00D1FF;
+        box-shadow: var(--font-color-default 0px 0px 30px);
+        position: relative;
+    }
+
+    #facebook_icon {
+        color: aliceblue;
+        animation: icon-animation 1s alternate 3s 1;
+    }
+
+    #linkedin_icon {
+        color: #00D1FF;
+        animation: icon-animation 1s alternate 3.5s 1;
+    }
+
+    #github_icon {
+        color: var(--box-background);
+        animation: icon-animation 1s alternate 4s 1;
+    }
+
+    #legend_column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 0px;
+    }
+
+    .legend_container-box {
+        align-items: center;
+        font-size: 1.2em;
+        background-color: var(--box-background);
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        margin: 16% 10% 10% 10%;
+        padding: 7%;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .shine {
+        right: 100%;
+        bottom: 0%;
+        rotate: 10deg;
+        align-self: inherit;
+        position: absolute;
+        height: 15%;
+        border-radius: 25px 0px 15px 0px;
+        width: 5%;
+        background-color: var(--font-color-default);
+        opacity: 00%;
+        box-shadow: var(--font-color-default) 0px 0px 20px;
+        transition: ease-in;
+        animation: shine_transition 0.5s alternate 2s 1;
+        z-index: 2;
+    }
+
+}
