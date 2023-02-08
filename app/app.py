@@ -11,7 +11,6 @@ app = flask.Flask(__name__)
 def home():
     return flask.render_template('index.html')
 
-app = Flask(__name__)
 msg_receiver = PrimaryMsgReceiver()
 
 basicConfig(level=INFO)
