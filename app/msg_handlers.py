@@ -41,11 +41,22 @@ def _format_request_to_msg_dict(request: CombinedMultiDict) -> dict:
         raise ValueError(f'The value its not the correct for formatation, must be a {CombinedMultiDict.__name__} not {request}')
         
 
+
 class PrimaryMsgReceiver(MsgReceiver):
+    commom_response = """
+    Hi my name is Jason, iam a bot system developed by Gian P. Nunes on Brazil.
+    That is photo on my profile its not me, its the whatsapp enterprise where i live !
+    My dev is developing my ohter functions, but, for a while, i have only this automatic message,
+    send some feedbacks to him caso tenha alguma ideia dahora, seuge aí uma foto minha:
+    """
     def receive_and_response_msg(self, msg) -> messaging_response.MessagingResponse:
         msg_data: dict = _format_request_to_msg_dict(msg)
         message = messaging_response.MessagingResponse()
-        message.message(body='OIIII', to=msg_data['from'], from_=msg_data['to'])
+        message.message(
+            media_url='https://raw.githubusercontent.com/Jason21tod/me-and-who-iam/main/app/static/styles/jason.png',
+            body=self.commom_response, to=msg_data['from'],
+            from_=msg_data['to']
+            )
         info(f'Out -> {msg}')
         return message
         
