@@ -1,0 +1,67 @@
+:root {
+    --background-color: rgb(0, 121, 158);
+    --font-color: rgb(27, 27, 27);
+    --box-color: rgba(100, 100, 189, 0.589);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-weight: 500;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0% 5%;
+    gap: 20px;
+}
+
+h1 {
+    margin-top: 2.5%;
+    font-size: 1.7em;
+    text-align: center;
+    margin-bottom: 5%;
+    font-weight: 700;
+}
+
+ol {
+    list-style: circle;
+    list-style-position: inside;
+}
+
+.header_legend {
+    background-color: var(--box-color);
+    border-radius: 15px;
+    padding: 3.5%;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.channel_box {
+    padding: 3%;
+    border-radius: 10px;
+}
+
+#whatsapp_box {
+    background-color: rgba(37, 167, 37, 0.521);
+}
+
+
+#discord_box {
+    background-color: rgb(61, 43, 226);
+}
+
+.title_box {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.3em;
+    font-weight: 550;
+}
