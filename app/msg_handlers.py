@@ -56,7 +56,7 @@ class PrimaryMsgReceiver(MsgReceiver):
                             to=msg_data['from'])
         client.messages.create(
                             mediaUrl='https://github.com/Jason21tod/me-and-who-iam/blob/main/app/static/styles/jason_whats_profile.png',
-                            body='',
+                            body='Helloooo ( im beautifull in green )',
                             from_=msg_data['to'],
                             to=msg_data['from'])
         info(f'Out -> {message}')
