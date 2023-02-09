@@ -5,6 +5,8 @@ from twilio.rest import Client
 from logging import info
 import os
 
+from app.app import jason_bot_page
+
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
@@ -55,6 +57,8 @@ class PrimaryMsgReceiver(MsgReceiver):
                             media_url='https://raw.githubusercontent.com/Jason21tod/me-and-who-iam/1bbf64b61024e17bd2037604c11e35ad06e34bd2/app/static/jason_whats_profile.png',
                             from_=msg_data['to'],
                             to=msg_data['from'])
-        return msg
+        return 'hi, maybe iam not working...'
         
+        
+
 
