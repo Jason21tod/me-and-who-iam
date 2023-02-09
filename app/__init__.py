@@ -3,9 +3,7 @@ from flask import request
 from logging import basicConfig, INFO
 from .msg_handlers import PrimaryMsgReceiver
 
-
 app = flask.Flask(__name__)
-
 
 @app.route('/')
 def home():
