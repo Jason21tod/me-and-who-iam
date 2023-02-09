@@ -46,17 +46,14 @@ class PrimaryMsgReceiver(MsgReceiver):
       😄 Hi my name is Jason, iam a bot system developed by Gian P. Nunes on Brazil.\n
     \nThat is photo on my profile its not me 🙃, its the whatsapp enterprise where i live !\n\n
     My dev is developing my ohter functions 🤖, for a while, i have only this automatic message,
-    send some feedbacks to him if you have some cool feedbacks  🤜 🤛. Hah ! That its my real face on whatsapp:
+    send some feedbacks to him if you have some cool feedbacks  🤜 🤛. Hah ! That its my real face on whatsapp.^
     """
     def receive_and_response_msg(self, msg) -> messaging_response.MessagingResponse:
         msg_data: dict = _format_request_to_msg_dict(msg)
         message = messaging_response.MessagingResponse()
-        message = client.messages.create(body=self.commom_response,
-                            from_=msg_data['to'],
-                            to=msg_data['from'])
-        client.messages.create(
+        message = client.messages.create(
                             media_url='https://github.com/Jason21tod/me-and-who-iam/blob/main/app/static/styles/jason_whats_profile.png?raw=true',
-                            body='Helloooo ( im beautifull in green )',
+                            body=self.commom_response,
                             from_=msg_data['to'],
                             to=msg_data['from'])
         info(f'Out -> {message}')
