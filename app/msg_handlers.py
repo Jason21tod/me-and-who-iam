@@ -52,11 +52,13 @@ class PrimaryMsgReceiver(MsgReceiver):
     def receive_and_response_msg(self, msg) -> str:
         msg_data: dict = _format_request_to_msg_dict(msg)
         msg = messaging_response.MessagingResponse()
-        message = client.messages.create(body=self.commom_response,
+        client.messages.create(
+                    body=self.commom_response,
+                    from_=msg_data['to'],
+                    to=msg_data['from'])
+        message = client.messages.create(
+                            body=' Im beautifull in green',
                             media_url='https://raw.githubusercontent.com/Jason21tod/me-and-who-iam/1bbf64b61024e17bd2037604c11e35ad06e34bd2/app/static/jason_whats_profile.png',
-                            from_=msg_data['to'],
-                            to=msg_data['from'])
-        client.messages.create(body=' Im beautifull in green',
                             from_=msg_data['to'],
                             to=msg_data['from'])
         
