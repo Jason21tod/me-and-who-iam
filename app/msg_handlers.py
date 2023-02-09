@@ -10,7 +10,6 @@ auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
 
 
-
 class MsgReceiver(ABC):
     @abstractmethod
     def receive_and_response_msg(self, msg):
@@ -52,12 +51,11 @@ class PrimaryMsgReceiver(MsgReceiver):
     def receive_and_response_msg(self, msg) -> messaging_response.MessagingResponse:
         msg_data: dict = _format_request_to_msg_dict(msg)
         message = messaging_response.MessagingResponse()
-        message.message(
-            media_url='https://raw.githubusercontent.com/Jason21tod/me-and-who-iam/main/app/static/styles/jason.png',
-            body=self.commom_response, to=msg_data['from'],
-            from_=msg_data['to']
-            )
-        info(f'Out -> {msg}')
+        message = client.messages.create(body=self.commom_response,
+                            media_url='https://raw.githubusercontent.com/dianephan/flask_upload_photos/main/UPLOADS/DRAW_THE_OWL_MEME.png',
+                            from_=msg_data['to'],
+                            to=msg_data['from'])
+        info(f'Out -> {message}')
         return message
         
 
