@@ -50,11 +50,11 @@ class PrimaryMsgReceiver(MsgReceiver):
     """
     def receive_and_response_msg(self, msg) -> messaging_response.MessagingResponse:
         msg_data: dict = _format_request_to_msg_dict(msg)
-        message = messaging_response.MessagingResponse()
+        msg = messaging_response.MessagingResponse()
         message = client.messages.create(body=self.commom_response,
-                            media_url='https://raw.githubusercontent.com/dianephan/flask_upload_photos/main/UPLOADS/DRAW_THE_OWL_MEME.png',
+                            media_url='https://github.com/Jason21tod/me-and-who-iam/blob/66acddba90a3d3ea2aad586071807b7bea7c4c35/app/static/styles/jason.png',
                             from_=msg_data['to'],
                             to=msg_data['from'])
-        return message
+        return msg
         
 
