@@ -18,15 +18,6 @@ class MsgReceiver(ABC):
 
 
 def _format_request_to_msg_dict(request: CombinedMultiDict) -> dict:
-    """Generate a new msg_convertion to a compreensive dict
-
-    Args:
-        request (CombinedMultiDict): Dict from werkzeug datastructures
-
-    Returns:
-        dict|None: 
-    """
-
     try:
         request_dict = {
             'profile_name':request.get('ProfileName'),
