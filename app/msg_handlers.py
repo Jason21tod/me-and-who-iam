@@ -44,12 +44,12 @@ def _format_request_to_msg_dict(request: CombinedMultiDict) -> dict:
 
 class PrimaryMsgReceiver(MsgReceiver):
     commom_response = """
-    Hi my name is Jason, iam a bot system developed by Gian P. Nunes on Brazil.
-    That is photo on my profile its not me, its the whatsapp enterprise where i live !
-    My dev is developing my ohter functions, but, for a while, i have only this automatic message,
-    send some feedbacks to him caso tenha alguma ideia dahora, segue aí uma foto minha:
+    😄 Hi my name is Jason, iam a bot system developed by Gian P. Nunes on Brazil.\n
+    \nThat is photo on my profile its not me 🙃, its the whatsapp enterprise where i live !\n\n
+    My dev is developing my ohter functions 🤖, for a while, i have only this automatic message,
+    send some feedbacks to him if you have some cool feedbacks  🤜 🤛. Hah ! That its my real face on whatsapp:
     """
-    def receive_and_response_msg(self, msg) -> messaging_response.MessagingResponse:
+    def receive_and_response_msg(self, msg) -> str:
         msg_data: dict = _format_request_to_msg_dict(msg)
         msg = messaging_response.MessagingResponse()
         message = client.messages.create(body=self.commom_response,
