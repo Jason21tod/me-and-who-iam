@@ -56,7 +56,7 @@ class PrimaryMsgReceiver(MsgReceiver):
                     media_url='https://raw.githubusercontent.com/Jason21tod/me-and-who-iam/1bbf64b61024e17bd2037604c11e35ad06e34bd2/app/static/jason_whats_profile.png',
                     from_= msg_data['to'],
                     to= msg_data['from'])
-        return 'hi, maybe iam not working...'
+        return message
 
         
 
