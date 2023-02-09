@@ -11,6 +11,10 @@ app = flask.Flask(__name__)
 def home():
     return flask.render_template('index.html')
 
+@app.route('/jason_bot.html')
+def jason_bot_page():
+    return flask.render_template('jason_bot.html')
+
 msg_receiver = PrimaryMsgReceiver()
 
 basicConfig(level=INFO)
