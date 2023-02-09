@@ -1,5 +1,5 @@
 import flask 
-from flask import Flask, request
+from flask import request
 from logging import basicConfig, INFO
 from .msg_handlers import PrimaryMsgReceiver
 
