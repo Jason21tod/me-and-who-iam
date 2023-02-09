@@ -5,7 +5,6 @@ from twilio.rest import Client
 from logging import info
 import os
 
-from app.app import jason_bot_page
 
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
@@ -58,7 +57,7 @@ class PrimaryMsgReceiver(MsgReceiver):
                             from_=msg_data['to'],
                             to=msg_data['from'])
         return 'hi, maybe iam not working...'
-        
+
         
 
 
