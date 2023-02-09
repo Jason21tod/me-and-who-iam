@@ -47,7 +47,7 @@ class PrimaryMsgReceiver(MsgReceiver):
     Hi my name is Jason, iam a bot system developed by Gian P. Nunes on Brazil.
     That is photo on my profile its not me, its the whatsapp enterprise where i live !
     My dev is developing my ohter functions, but, for a while, i have only this automatic message,
-    send some feedbacks to him caso tenha alguma ideia dahora, seuge aí uma foto minha:
+    send some feedbacks to him caso tenha alguma ideia dahora, segue aí uma foto minha:
     """
     def receive_and_response_msg(self, msg) -> messaging_response.MessagingResponse:
         msg_data: dict = _format_request_to_msg_dict(msg)
