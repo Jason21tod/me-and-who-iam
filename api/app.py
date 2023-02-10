@@ -3,21 +3,20 @@ from flask import request
 from logging import basicConfig, INFO
 from logging import INFO, basicConfig, info
 
-basicConfig(level=INFO)
+basicConfig(level=INFO, filename=r'api\logs\app.log')
 
 app = flask.Flask(__name__)
+
 
 @app.route('/')
 def home():
     return flask.render_template('index.html')
 
+
 @app.route('/jason_bot.html')
 def jason_bot_page():
     info('Going to jason page')
     return flask.render_template('jason_bot.html')
-
-basicConfig(level=INFO)
-
 
 @app.route('/bot', methods=['GET', 'POST'])
 def bot_endpoint()-> str:
