@@ -28,5 +28,8 @@ def bot_endpoint()-> str:
     req = request.values
     return str(msg_receiver.receive_and_response_msg(req))
 
+def run_app():
+    return app.run()
+
 if __name__ == '__main__':
     app.run(debug=True)
