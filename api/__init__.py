@@ -29,7 +29,7 @@ def bot_endpoint()-> str:
     return str(msg_receiver.receive_and_response_msg(req))
 
 def run_app():
-    return app.run(port=8000)
+    return app.run(port=0000)
 
 if __name__ == '__main__':
     app.run(debug=True)
