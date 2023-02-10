@@ -1,20 +1,8 @@
 {
-    "builds": [
-    {
-        "src":"app/__init__.py",
-        "use":"@vercel/python"
-    }
-    ],
-    "routes": [
-        {
-            "src":"app/(.*)",
-            "dest":"app/__init__.py"
-        }
-    ],
     "functions": {
         "app/__init__.py": {
             "memory": 1024,
-            "maxDuration": 30
+            "maxDuration": 1
         }
     }
 }
