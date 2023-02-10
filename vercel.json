@@ -1,8 +1,0 @@
-{
-    "functions": {
-        "__init__.py": {
-            "memory": 1024,
-            "maxDuration": 1
-        }
-    }
-}
