@@ -1,7 +1,6 @@
 import flask 
 from flask import request
 from logging import basicConfig, INFO
-from libs.msg_handlers import PrimaryMsgReceiver
 from logging import INFO, basicConfig, info
 
 basicConfig(level=INFO)
@@ -17,14 +16,13 @@ def jason_bot_page():
     info('Going to jason page')
     return flask.render_template('jason_bot.html')
 
-msg_receiver = PrimaryMsgReceiver()
-
 basicConfig(level=INFO)
 
 
 @app.route('/bot', methods=['GET', 'POST'])
 def bot_endpoint()-> str:
-    
+    from .msg_handlers import PrimaryMsgReceiver
+    msg_receiver = PrimaryMsgReceiver()
     info('Going to bot page')
     req = request.values
     return str(msg_receiver.receive_and_response_msg(req))
