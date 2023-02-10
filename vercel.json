@@ -1,6 +1,6 @@
 {
     "functions": {
-        "app/__init__.py": {
+        "__init__.py": {
             "memory": 1024,
             "maxDuration": 1
         }
