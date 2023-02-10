@@ -1,7 +1,7 @@
 import flask 
 from flask import request
 from logging import basicConfig, INFO
-from msg_handlers import PrimaryMsgReceiver
+from libs.msg_handlers import PrimaryMsgReceiver
 from logging import INFO, basicConfig, info
 
 basicConfig(level=INFO)
