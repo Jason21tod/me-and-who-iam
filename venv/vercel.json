@@ -2,4 +2,5 @@
     "rewrites": [
 
     { "source": "/(.*)", "destination": "/api/__init__.py" }
+    
 ]}
