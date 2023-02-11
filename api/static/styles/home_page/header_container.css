@@ -88,7 +88,7 @@ body {
 
     .header_container {
         display: grid;
-        background: url(Untitled.png);
+        background: url(../../imgs/background.png);
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;

@@ -3,8 +3,8 @@ from flask import request
 from logging import basicConfig, INFO
 from logging import INFO, basicConfig, info
 
-basicConfig(level=INFO, filename=r'api\logs\app.log')
 
+basicConfig(level=INFO, filename=r'api\logs\app.log')
 app = flask.Flask(__name__)
 
 
