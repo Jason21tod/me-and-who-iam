@@ -1,7 +1,6 @@
 .footer_container {
     margin-top: 20%;
     position: relative;
-    background: linear-gradient(180deg, var(--background-default-color), 40%, black);
     display: flex;
     flex-direction: column;
     align-items: center;
