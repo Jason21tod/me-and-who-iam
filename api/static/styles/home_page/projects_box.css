@@ -51,6 +51,7 @@
         padding: 5%;
         transition: 2s;
         border-radius: 15px;
+        display: none;
         opacity: 0;
         background-color: var(--box-background);
     }
