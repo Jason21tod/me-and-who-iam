@@ -7,7 +7,6 @@
         height: 100vh;
         gap:40px;
         background: linear-gradient(360deg, var(--background-default-color), 50%, black);
-        padding: 4%;
     }
 
     .main_container {
