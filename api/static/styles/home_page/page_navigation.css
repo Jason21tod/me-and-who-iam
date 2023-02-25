@@ -1,0 +1,26 @@
+#page_navigation {
+    background: fixed;
+    background-color: var(--background-color);
+    display: flex;
+    font-family: var(--font-family-default);
+    position: fixed;
+    position: -webkit-sticky;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+}
+
+#page_navigation a {
+    text-decoration: none;
+    color: var(--aqua-font-color);
+    transition: 1s;
+    
+}
+
+#page_navigation a:hover {
+    transform: scale(1.1);
+}
+
+
