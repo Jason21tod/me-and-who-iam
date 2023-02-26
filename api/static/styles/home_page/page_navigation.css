@@ -1,6 +1,6 @@
 #page_navigation {
     background: fixed;
-    background-color: var(--background-color);
+    background: linear-gradient(var(--background-color), #00001800);
     display: flex;
     font-family: var(--font-family-default);
     position: fixed;
@@ -9,7 +9,8 @@
     padding-bottom: 2%;
     justify-content: space-around;
     text-align: center;
-    width: 100%;
+    width: 100vw;
+    overflow: hidden;
 }
 
 #page_navigation a {
@@ -24,3 +25,38 @@
 }
 
 
+#link_one, #link_two, #link_three, #link_four {
+    opacity: 0%;
+}
+
+#link_one {
+    animation: link_animation 1s forwards 2.5s;
+}
+
+#link_two {
+    animation: link_animation 1s forwards 3s;
+}
+
+#link_three {
+    animation: link_animation 1s forwards 3.5s;
+}
+
+#link_four {
+    animation: link_animation 1s forwards 4s;
+}
+
+
+@keyframes link_animation {
+    from {
+        display: none;
+    }
+
+    50% {
+        text-shadow: var(--aqua-font-color) 0px 0px 30px;
+        scale: 1.01;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}

@@ -1,7 +1,64 @@
 #introduction {
-    height: 130vh;
-    width: 100vw;
-    background-image: url('../../imgs/capa.jpg');
+    background-image: url("../../imgs/capa.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-color: var(--background-color);
+    background-size: 60%;
+    background-position-y: center;
+    background-position-x: right;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-family-default);
+    padding-top: 10%;
+    padding-left: 7%;
+    overflow: hidden;
+}
+
+#introduction--tittle {
+    margin-top: 13%;
+    color: var(--aqua-font-color);
+    font-size: 2.2em;
+    text-decoration: underline;
+    animation: introduction_tittle 3s forwards 0.7s;
+    opacity: 0%;
+}
+
+@keyframes introduction_tittle {
+    from {
+        display: none;
+    }
+
+    50% {
+        text-shadow: white 0px 0px 30px;
+        scale: 1.04;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+#introduction--impact_phrase {
+    color: white;
+    text-align: left;
+    margin-top: 1.5%;
+    margin-left: 5%;
+    font-size: 1.3em;
+    animation: impact_phrase 2s forwards 0.2s;
+    opacity: 0%;
+}
+
+
+@keyframes impact_phrase {
+    from {
+        display: none;
+    }
+
+    50% {
+        text-shadow: white 0px 0px 30px;
+        scale: 1.01;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }

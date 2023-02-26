@@ -1,5 +1,11 @@
 :root {
     --background-color: #000018;
     --font-family-default: 'Kdam Thmor Pro', sans-serif;
-    --aqua-font-color: #59E1FF;
+    --aqua-font-color: #9BFFF9;
+    --white-font-color: 
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
 }
