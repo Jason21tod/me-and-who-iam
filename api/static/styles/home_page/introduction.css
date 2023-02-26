@@ -4,12 +4,11 @@
     background-color: var(--background-color);
     background-size: 60%;
     background-position-y: center;
-    background-position-x: right;
+    background-position-x: center;
     width: 100vw;
     height: 100vh;
     font-family: var(--font-family-default);
     padding-top: 10%;
-    padding-left: 7%;
     overflow: hidden;
 }
 
@@ -17,6 +16,7 @@
     margin-top: 13%;
     color: var(--aqua-font-color);
     font-size: 2.2em;
+    margin-left: 3%;
     text-decoration: underline;
     animation: introduction_tittle 3s forwards 0.7s;
     opacity: 0%;

@@ -2,10 +2,18 @@
     --background-color: #000018;
     --font-family-default: 'Kdam Thmor Pro', sans-serif;
     --aqua-font-color: #9BFFF9;
-    --white-font-color: 
+    --white-font-color: #D9D9D9;
+    --box-default-color: #151A3F;
 }
 
 body {
     width: 100vw;
-    overflow: hidden;
+    font-family: var(--font-family-default);
+    background-color: var(--background-color);
+}
+
+h2 {
+    color: var(--aqua-font-color);
+    text-align: center;
+    text-decoration: underline;
 }
