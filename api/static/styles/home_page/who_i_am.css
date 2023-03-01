@@ -42,5 +42,5 @@
 .resume_container--box:hover {
     background-color: aqua;
     color: var(--box-default-color);
-    scale: 0.9;
+    scale: 0.75;
 }

@@ -11,6 +11,7 @@
     text-align: center;
     width: 100vw;
     font-size: 1.3em ;
+    z-index: 3;
 }
 
 #page_navigation a {
