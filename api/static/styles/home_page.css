@@ -1,9 +1,0 @@
-.main_container {
-    background-color: var(--background-color);
-    height: 100vh;
-}
-
-.box {
-    background-color: var(--box-default-color);
-    padding: 3%;
-}

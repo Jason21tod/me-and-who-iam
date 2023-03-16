@@ -1,0 +1,11 @@
+.header_menu {
+    display: none;
+    position: fixed;
+    background-color: var(--blue-default);
+    width: 70vw;
+    height: 100vh;
+}
+
+.header_menu button {
+    background-color: var(--blue-default);
+}
