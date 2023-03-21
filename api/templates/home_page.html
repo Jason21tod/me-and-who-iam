@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,49 +13,157 @@
     <link rel="stylesheet" href="../static/css/base.css">
     <link rel="stylesheet" href="../static/css/front_page/front_page.css">
     <link rel="stylesheet" href="../static/css/header_menu/header_menu.css">
-
+    <link rel="stylesheet" href="../static/css/who_iam/who_iam.css">
+    <link rel="stylesheet" href="../static/css/what_i_do/what_i_do.css">
+    <link rel="stylesheet" href="../static/css/skills_and_projects/skills_and_projects.css">
+    <link rel="stylesheet" href="../static/css/lets_work_together/lets_work_together.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
 
     <title>Jason Developer</title>
 </head>
 <body>
     <header class="header_menu">
         <nav class="header_menu--navigation">
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
+            <a href="#who_iam" onclick="turn_menu()">Quem sou eu</a>
+            <a href="#what_i_do" onclick="turn_menu()">O que eu faço</a>
+            <a href="#skills_and_projects" onclick="turn_menu()">Skills e projetos</a>
+            <a href="#lets_work_together" onclick="turn_menu()">Vamos trabalhar juntos ?</a>
         </nav>
+        <div class="social_medias">
+            <a href="https://www.linkedin.com/in/gian-pereira-595b48205/">
+                <img src="../static/imgs/linkedin-celphone.png" alt="Linkedin">
+            </a>
+            
+            <a href="https://www.facebook.com/gian.pereira.3705/">
+                <img src="../static/imgs/facebook-celphone.png" alt="facebook">
+            </a>
+            
+            <a href="https://github.com/Jason21tod">
+                <img src="../static/imgs/github-celphonr.png" alt="github">
+            </a>
+        </div>
     </header>
     
     <main>
-        <button class="menu_button"></button>
+        <button class="menu_button" onclick="turn_menu()"></button>
         <section id="front_page">
             <h1 class="front_page_title">Jason Developer</h1>
             <p class="front_page_legend">Vamos desenvolver seu universo ?</p>
         </section>
 
+        <section id="who_iam">
+            <h2>Quem sou eu</h2>
+            <div id="profile_container" class="container">
+                <img id="profile_image" src="../static/imgs/gian_pereira_celhpone.jpg" alt="Eu mesmo">
+                <legend class="common_text">
+                    Olá meu nome é Gian Pereira Nunes e sou atualmente,
+                    estudante de programação, atualmente migrando para ser fullstack.
+                    Venho estudando técnologia desde os meus 15 anos de idade, porém,
+                    mergulhei na programação quando consegui meu curso na Alura, a partir
+                    daí tracei meus planos para tornar Freelancer nessa área.
+                     Desde então, busquei oportunidades, até que adquiri minha primeira em
+                    uma empresa real: O Ibiuna Clara Resorts.
+                </legend>
+            </div>
+            <div class="who_iam_scroll" onscroll="verify_scroll()">
+                <span class="who_iam_scroll--box-active" >
+                    <img src="../static/imgs/computer-celphone.png" alt="automações web">
+                    <legend>Desenvolvedor de sistemas web</legend>
+                </span>
+                 
+                <span class="who_iam_scroll--box-active">
+                    <img src="../static/imgs/architecture-celphone.png" alt="Arquitetura de software">
+                    <legend>metodologias profissionais</legend>
+                </span>
+                <span  class="who_iam_scroll--box-active">
+                    <img src="../static/imgs/techno-solutions-celphone.png" alt="Soluções reais, para problemas reais">
+                    <legend>Soluções reais</legend>
+                </span>
+                <span  class="who_iam_scroll--box-active">
+                    <img src="../static/imgs/web-automation-celphone.png" alt="Automações e bots web">
+                    <legend>Bots e automações</legend>
+                </span  class="who_iam_scroll--box-inactive">
+            </div>
+        </section>
+
         <section id="what_i_do">
+        
             <h2>O que eu faço</h2>
-            <div></div>
-            <div></div>
+            <legend class="common_text">
+                Atualmente, mantenho um sistema que desenvolvi para o Ibiúna Clara Resorts,
+                um os maiores hotéis da america latina. Projeto esse, que surgiu de maneira
+                curiosa e que me fez além de aprender mais sobre tecnologia, desenvolver 
+                expertises e softskills para o mercado de trabalho.
+            </legend>
+            <div id="what_i_do--button_bar">
+                <button onclick="toggle_problem_description()">O problema / Solução</button>
+            </div>
+
+            <h3 class="what_i_do--problem">O problema era o seguinte...</h3>
+            <p class="what_i_do--paragraph what_i_do--problem">
+                Eu trabalho no setor da monitoria atualmente, e tinhamos uma situação onde
+                eu e meus colegas de trabalho nos habituamos. Faziamos uma listagem de crianças
+                do hotel com papel, no qual o hóspede inseria as informações da criança e nós,
+                ao fim de tudo, tinhamos que mandar a listagem de todas as crianças no whatsapp
+                para que todos da equipe ficassem cientes. Foi então que digitalizamos tudo.
+            </p>
+
+            <h3 class="what_i_do--solution"> Minha solução foi...</h3>
+            <p  class="what_i_do--paragraph what_i_do--solution">
+                Agora, o sistema é digital, o cadastro é feito de forma digital, no conforto do
+                hóspede. Nossa equipe consegue fazer a consulta desses dados em tempo real; Por
+                meio do whatsapp e um painel administrativo; O dados podem ser usados para fazer
+                predições estatisticas para ajudar em planejamento.
+            </p>
+        
         </section>
         
-        <section id="skills_and_project">
+        <section id="skills_and_projects">
             <h2>Skills e projetos</h2>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="skills_scroll_bar">
+                <span class="skills_box-projects">
+                    <h3 class="skills_box-project_title">Em breve</h3>
+                    <img class="skills_image" src="#" alt="Este projeto está sendo produzido">
+                    <p>Progresso (0%)</p>
+                </span>
+            </div>
         </section>
         
         <section id="lets_work_together">
-            <h2></h2>
-            <form action="#">
-                <legend>Do que você precisa ?</legend>
+            <h2>Vamos trabalhar juntos ?
+            </h2>
+            <legend class="common_text">Do que você precisa para solucionar seu problema ?</legend>
+            <form class="contact_form" action="/" method="post">
+                <div class="contact_form--contact_data">
+                    <label for="name">Nome:</label><input type="text" name="name" id="name">
+                    <label for="email">Email:</label><input type="email" name="email" id="email">
+                    <label for="celphone">Número:</label><input type="tel" name="celphone" id="celphone">
+                </div>
+                <label for="about">Assunto:<textarea name="about" id="about" cols="38" rows="15"></textarea></label>
+                <input type="submit" name="submit" id="submit">
             </form>
-            <div></div>
         </section>
     </main>
 
     <footer>
+        <p>Ou fale comigo por aqui</p>
+        <div class="social_medias">
+            <a href="https://www.linkedin.com/in/gian-pereira-595b48205/">
+                <img src="../static/imgs/linkedin-celphone.png" alt="Linkedin">
+            </a>
+            <a href="https://www.facebook.com/gian.pereira.3705/">
+                <img src="../static/imgs/facebook-celphone.png" alt="facebook">
+            </a>
+            <a href="https://github.com/Jason21tod">
+                <img src="../static/imgs/github-celphonr.png" alt="github">
+            </a>
+        </div>
     </footer>
 </body>
+<script src="../static/scripts/main.js">
+</script>
+<noscript>
+    <style>
+        .what_i_do--solution .what_i_do--problem{ display: inline-block;}
+    </style></noscript>
 </html>

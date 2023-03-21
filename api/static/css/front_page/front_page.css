@@ -1,25 +1,43 @@
 #front_page {
-    background: var(--background-color);
-    font-family: var(--text-font);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding-top: 15%;
     background-image: url('../../imgs/capa.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 90%;
+    display: flex;
+    font-family: var(--text-font);
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    padding-top: 15%;
     text-align: center;
+    opacity: 0;
+    animation: timming_apears 1s forwards 1s;
 }
+
 
 .front_page_title {
     color: white;
     font-size: 1.8em;
     margin-top: 15%;
     text-decoration: underline;
+    opacity: 0;
+    animation: timming_apears 2s forwards 2s;
 }
 
-.front_page_legend{color: var(--aqua-default);
-margin-bottom: 30%;}
+.front_page_legend{
+    color: var(--aqua-default);
+    margin-bottom: 30%;
+    animation: timming_apears 2s forwards 3s;
+    opacity: 0;
+}
+
+@keyframes timming_apears {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}

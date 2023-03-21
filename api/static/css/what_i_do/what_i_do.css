@@ -1,0 +1,49 @@
+#what_i_do{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    margin-top: 40%;
+    padding: 0% 7%;
+    height: 100vh;
+}
+
+
+.what_i_do--paragraph {
+    margin: 10% 0%;
+}
+
+.what_i_do--problem {
+    text-align: left;
+    width: 90vw;
+}
+
+.what_i_do--solution {
+    text-align: right;
+    width: 90vw;
+    display: none;
+}
+
+#what_i_do--button_bar {
+    margin-top: 15%;
+    margin-bottom: 20%;
+    width: 100%;
+    display: flex;
+    padding: 3%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+#what_i_do--button_bar button {
+    color: var(--blue-default);
+    background-color: var(--aqua-default);
+    padding: 3%;
+    border-radius: 10%;
+}
+
+#what_i_do--button_bar button:active {
+    background-color: brown;
+}

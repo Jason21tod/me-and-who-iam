@@ -1,0 +1,37 @@
+#skills_and_projects{
+    margin-top: 35%;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.skills_scroll_bar {
+    display: flex;
+    margin-top: 5%;
+    padding: 0% 5%;
+    height: 30%;
+    margin: 10% 0%;
+}
+
+.skills_box-projects {
+    background-color: var(--blue-default);
+    text-align: center;
+    height: 100%;
+    width: 60%;
+    padding: 5%;
+    row-gap: 10%;
+}
+
+.skills_box-projects {
+    color: aqua;
+}
+
+.skills_image {
+    height: 50px;
+    width: 50px;
+    background-color: var(--aqua-default);
+    color: var(--blue-default)
+}

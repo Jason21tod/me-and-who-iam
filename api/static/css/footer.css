@@ -1,0 +1,15 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 25vh;
+    gap: 20px;
+}
+
+.social_medias {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}

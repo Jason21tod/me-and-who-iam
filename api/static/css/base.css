@@ -6,14 +6,59 @@
 }
 
 .menu_button {
-    background-image: url('../imgs/menu.png');
     background-color: var(--background-color);
+    background-image: url('../imgs/menu.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
     display: inline-block;
-    position: fixed;
     height: 7%;
+    position: fixed;
+    padding: 3%;
     margin-top: 4%;
     margin-left: 4%;
     width: 20%;
-    background-position: center center;
-    border: none;
+    z-index: 4;
+}
+
+.menu_button:active {
+    background-color: #59E1FF;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0% 5%;
+    border-radius: 5%;
+    padding: 3%;
+}
+
+.common_text {
+    color: var(--aqua-default);
+}
+
+h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 15%;
+}
+
+body {
+    background-color: #000018;
+    background: linear-gradient(var(--background-color) 80%, var(--blue-default));
+    font-family: var(--text-font);
+    word-spacing: 10%;
+    line-height: 165%;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+p {
+    color: white;
 }

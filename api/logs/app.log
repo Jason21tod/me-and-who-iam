@@ -1,0 +1,197 @@
+INFO:werkzeug:127.0.0.1 - - [20/Mar/2023 15:39:29] "[36mGET /static/imgs/capa.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 114-684-232
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:43] "GET / HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/linkedin-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/scripts/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/css/what_i_do/what_i_do.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/css/base.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/css/header_menu/header_menu.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/techno-solutions-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/gian_pereira_celhpone.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/css/front_page/front_page.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/computer-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/architecture-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/css/footer.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/css/who_iam/who_iam.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/css/lets_work_together/lets_work_together.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/github-celphonr.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/css/skills_and_projects/skills_and_projects.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/facebook-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/web-automation-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/menu.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "GET /static/imgs/capa.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:53:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:54:00] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:54:00] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:54:00] "[36mGET /static/css/lets_work_together/lets_work_together.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:54:00] "[36mGET /static/css/front_page/front_page.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:54:00] "[36mGET /static/css/what_i_do/what_i_do.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:54:00] "[36mGET /static/css/who_iam/who_iam.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:54:00] "[36mGET /static/css/header_menu/header_menu.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:54:00] "[36mGET /static/css/skills_and_projects/skills_and_projects.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:54:00] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:57:35] "GET / HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 10:58:08] "GET / HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/css/base.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/css/header_menu/header_menu.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/css/front_page/front_page.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/css/who_iam/who_iam.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/css/footer.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/css/lets_work_together/lets_work_together.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/css/what_i_do/what_i_do.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/css/skills_and_projects/skills_and_projects.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/scripts/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/linkedin-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/facebook-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/github-celphonr.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/gian_pereira_celhpone.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/computer-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/techno-solutions-celphone.png HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/architecture-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/web-automation-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/menu.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:34] "GET /static/imgs/capa.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:00:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:ImmutableMultiDict([('name', 'Creuza'), ('email', 'Creuza@gmail.com'), ('celphone', '+5533941244'), ('about', 'Quero fazer um site para uma sorveteria'), ('submit', 'Enviar')])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "POST / HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/css/header_menu/header_menu.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/css/front_page/front_page.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/css/who_iam/who_iam.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/css/what_i_do/what_i_do.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/facebook-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/css/lets_work_together/lets_work_together.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/css/skills_and_projects/skills_and_projects.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/github-celphonr.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/scripts/main.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/gian_pereira_celhpone.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/computer-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/web-automation-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/techno-solutions-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/architecture-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/linkedin-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/menu.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:02:03] "[36mGET /static/imgs/capa.jpg HTTP/1.1[0m" 304 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:03:19] "GET / HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:03:31] "GET / HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/css/base.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/css/front_page/front_page.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/css/header_menu/header_menu.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/css/who_iam/who_iam.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/computer-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/architecture-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/css/what_i_do/what_i_do.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/web-automation-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/gian_pereira_celhpone.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/linkedin-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/github-celphonr.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/facebook-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/techno-solutions-celphone.png HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/css/footer.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/css/lets_work_together/lets_work_together.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/css/skills_and_projects/skills_and_projects.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/scripts/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/menu.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "GET /static/imgs/capa.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:04:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/css/front_page/front_page.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/css/base.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/css/header_menu/header_menu.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/css/who_iam/who_iam.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/css/what_i_do/what_i_do.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/css/lets_work_together/lets_work_together.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/css/footer.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/css/skills_and_projects/skills_and_projects.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/linkedin-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/github-celphonr.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/scripts/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/architecture-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/gian_pereira_celhpone.jpg HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/techno-solutions-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/computer-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/web-automation-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/facebook-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/capa.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "GET /static/imgs/menu.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/css/header_menu/header_menu.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/css/base.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/css/front_page/front_page.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/css/lets_work_together/lets_work_together.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/css/who_iam/who_iam.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/css/what_i_do/what_i_do.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/imgs/linkedin-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/scripts/main.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/imgs/facebook-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/imgs/github-celphonr.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/imgs/gian_pereira_celhpone.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/css/skills_and_projects/skills_and_projects.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/imgs/architecture-celphone.png HTTP/1.1" 200 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/css/footer.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/imgs/techno-solutions-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/imgs/computer-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:32] "GET /static/imgs/web-automation-celphone.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:33] "GET /static/imgs/menu.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:33] "GET /static/imgs/capa.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:06:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:ImmutableMultiDict([('name', 'Gian Pereira Nunes'), ('email', 'gian.21.otaku@gmail.com'), ('celphone', '15997193465'), ('about', 'Esse é o assunto que eu quero '), ('submit', 'Enviar')])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "POST / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/css/header_menu/header_menu.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/css/front_page/front_page.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/css/who_iam/who_iam.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/css/what_i_do/what_i_do.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/css/skills_and_projects/skills_and_projects.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/github-celphonr.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/scripts/main.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/css/lets_work_together/lets_work_together.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/linkedin-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/facebook-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/css/footer.css HTTP/1.1[0m" 304 -
+INFO:root:ImmutableMultiDict([])
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/web-automation-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/computer-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/gian_pereira_celhpone.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/architecture-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/techno-solutions-celphone.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/menu.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Mar/2023 11:07:10] "[36mGET /static/imgs/capa.jpg HTTP/1.1[0m" 304 -
