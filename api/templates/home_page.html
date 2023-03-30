@@ -22,7 +22,7 @@
     <title>Jason Developer</title>
 </head>
 <body>
-    <header class="header_menu">
+    <header class="header_menu"> 
         <nav class="header_menu--navigation">
             <a href="#who_iam" onclick="turn_menu()">Quem sou eu</a>
             <a href="#what_i_do" onclick="turn_menu()">O que eu faço</a>
@@ -75,10 +75,12 @@
                     <img src="../static/imgs/architecture-celphone.png" alt="Arquitetura de software">
                     <legend>metodologias profissionais</legend>
                 </span>
+
                 <span  class="who_iam_scroll--box-active">
                     <img src="../static/imgs/techno-solutions-celphone.png" alt="Soluções reais, para problemas reais">
                     <legend>Soluções reais</legend>
                 </span>
+                
                 <span  class="who_iam_scroll--box-active">
                     <img src="../static/imgs/web-automation-celphone.png" alt="Automações e bots web">
                     <legend>Bots e automações</legend>
@@ -91,7 +93,7 @@
             <h2>O que eu faço</h2>
             <legend class="common_text">
                 Atualmente, mantenho um sistema que desenvolvi para o Ibiúna Clara Resorts,
-                um os maiores hotéis da america latina. Projeto esse, que surgiu de maneira
+                um dos maiores hotéis da america latina. Projeto esse, que surgiu de maneira
                 curiosa e que me fez além de aprender mais sobre tecnologia, desenvolver 
                 expertises e softskills para o mercado de trabalho.
             </legend>
@@ -135,11 +137,11 @@
             <legend class="common_text">Do que você precisa para solucionar seu problema ?</legend>
             <form class="contact_form" action="/" method="post">
                 <div class="contact_form--contact_data">
-                    <label for="name">Nome:</label><input type="text" name="name" id="name">
-                    <label for="email">Email:</label><input type="email" name="email" id="email">
-                    <label for="celphone">Número:</label><input type="tel" name="celphone" id="celphone">
+                    <label for="name">Nome:</label><input type="text" name="name" id="name" placeholder="Seu Nome Aqui">
+                    <label for="email">Email:</label><input type="email" name="email" id="email" placeholder="seu_email@endereço">
+                    <label for="celphone">Celular:</label><input type="tel" name="celphone" id="celphone" placeholder="(XX)XXXX-XXXXX">
                 </div>
-                <label for="about">Assunto:<textarea name="about" id="about" cols="38" rows="15"></textarea></label>
+                <label id="label_about" for="about">Assunto:<textarea name="about" id="about" cols="38" rows="15"></textarea></label>
                 <input type="submit" name="submit" id="submit">
             </form>
         </section>

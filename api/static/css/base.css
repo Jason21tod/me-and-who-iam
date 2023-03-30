@@ -5,8 +5,9 @@
     --blue-default: #151A3F;
 }
 
-.menu_button {
-    background-color: var(--background-color);
+@media screen and (max-width:420px){
+    .menu_button {
+    background-color: transparent;
     background-image: url('../imgs/menu.png');
     background-position: center center;
     background-repeat: no-repeat;
@@ -19,11 +20,9 @@
     margin-left: 4%;
     width: 20%;
     z-index: 4;
+    }
 }
 
-.menu_button:active {
-    background-color: #59E1FF;
-}
 
 .container {
     align-items: center;
@@ -51,6 +50,9 @@ body {
     font-family: var(--text-font);
     word-spacing: 10%;
     line-height: 165%;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 h3 {
@@ -61,4 +63,19 @@ h3 {
 
 p {
     color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes timming_apears {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }

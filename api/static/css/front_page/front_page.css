@@ -1,37 +1,85 @@
-#front_page {
-    align-items: center;
-    background-image: url('../../imgs/capa.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 90%;
-    display: flex;
-    font-family: var(--text-font);
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-between;
-    padding-top: 15%;
-    text-align: center;
-    opacity: 0;
-    animation: timming_apears 1s forwards 1s;
+@media screen and (max-width:1440px){
+    #front_page {
+        align-items: right;
+        background-image: url('../../imgs/capa_pc.jpg');
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 60%;
+        display: flex;
+        font-family: var(--text-font);
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-between;
+        padding-top: 5%;
+        opacity: 0;
+        animation: timming_apears 1s forwards 1s;
+    }
+
+
+    .front_page_title {
+        color: white;
+        font-size: 1.8em;
+        margin-top: 15%;
+        text-decoration: underline;
+        opacity: 0;
+        margin-left: 10%;
+        animation: timming_apears 2s forwards 2s;
+    }
+
+    .front_page_legend{
+        color: var(--aqua-default);
+        margin-bottom: 30%;
+        animation: timming_apears 2s forwards 3s;
+        opacity: 0;
+        margin-left: 15%;
+    }
+
+    .menu_button {
+        display: none;
+    }
 }
 
+@media screen and (max-width:420px){
+    #front_page {
+        align-items: center;
+        background-image: url('../../imgs/capa.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 90%;
+        display: flex;
+        font-family: var(--text-font);
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-between;
+        padding-top: 15%;
+        text-align: center;
+        opacity: 0;
+        animation: timming_apears 1s forwards 1s;
+    }
 
-.front_page_title {
-    color: white;
-    font-size: 1.8em;
-    margin-top: 15%;
-    text-decoration: underline;
-    opacity: 0;
-    animation: timming_apears 2s forwards 2s;
+
+    .front_page_title {
+        color: white;
+        font-size: 1.8em;
+        margin-top: 15%;
+        margin-left: 0%;
+        text-decoration: underline;
+        opacity: 0;
+        animation: timming_apears 2s forwards 2s;
+    }
+
+    .front_page_legend{
+        color: var(--aqua-default);
+        margin-bottom: 30%;
+        animation: timming_apears 2s forwards 3s;
+        opacity: 0;
+        margin-left: 0%;
+    }
+
+    .menu_button {
+        display: inherit;
+    }
 }
-
-.front_page_legend{
-    color: var(--aqua-default);
-    margin-bottom: 30%;
-    animation: timming_apears 2s forwards 3s;
-    opacity: 0;
-}
-
 @keyframes timming_apears {
     from {
         opacity: 0%;

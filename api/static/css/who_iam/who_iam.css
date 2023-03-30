@@ -1,54 +1,124 @@
-#who_iam {
-    margin-top: 40%;
-    align-items: center;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    height: 130vh;
-    overflow-x: visible;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width:1440px){
+    #who_iam {
+        margin-top: 10%;
+        align-items: center;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        height: 150vh;
+        overflow-x: visible;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        border-radius: 2%;
+    }
+
+    #profile_container {
+        background: var(--blue-default);
+        padding: 3%;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } 
+
+    #profile_image {
+        border-radius: 70%;
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 0%;
+    }
+
+    .who_iam_scroll {
+        display: flex;
+        margin-top: 10%;
+        height: 15%;
+        flex-direction: row;
+        flex-wrap: inherit;
+        overflow: inherit;
+        overflow-block: inherit;
+        scroll-behavior: inherit;
+        scroll-margin-inline-start: inherit;
+        color: var(--aqua-default);
+        align-items: baseline;
+        width:100%;
+        justify-content: space-around;
+        gap: 5%;
+    }
+
+    .who_iam_scroll--box-active {
+        text-align: center;
+        padding:0% 0%;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        gap: 15px;
+    }
+
+    .who_iam_scroll--box-active img {
+        background-color: var(--aqua-default);
+        padding: 3%;
+        border-radius: 10px;
+    }
 }
 
-#profile_container {
-    background: var(--blue-default);
-    padding: 8%;
-} 
+@media screen and (max-width:420px){
+    #who_iam {
+        margin-top: 40%;
+        align-items: center;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        height: 180vh;
+        overflow-x: visible;
+        align-items: center;
+        justify-content: center;
+    }
 
-#profile_image {
-    border-radius: 70%;
-    align-self: center;
-    justify-self: center;
-    margin-bottom: 10%;
-}
+    #profile_container {
+        background: var(--blue-default);
+        padding: 8%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+    } 
 
-.who_iam_scroll {
-    display: flex;
-    margin-top: 20%;
-    height: 15%;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow: scroll;
-    overflow-block: scroll;
-    scroll-behavior: smooth;
-    scroll-margin-inline-start: initial;
-    color: var(--aqua-default);
-    align-items: baseline;
-    width:100%;
-    gap: 20%;
-}
+    #profile_image {
+        border-radius: 70%;
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 10%;
+        gap: 0px;
+    }
 
-.who_iam_scroll--box-active {
-    
-    padding:0% 10%;
-    display: flex;
-    flex-direction: row;
-    width: 100px;
-    gap: 15px;
-}
+    .who_iam_scroll {
+        display: flex;
+        height: 15%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-margin-inline-start: initial;
+        color: var(--aqua-default);
+        align-items: baseline;
+        justify-content: left ;
+        width:100%;
+        gap: 20%;
+    }
 
-.who_iam_scroll--box-active img {
-    background-color: var(--aqua-default);
-    padding: 3%;
-    border-radius: 10px;
+    .who_iam_scroll--box-active {
+        text-align: left;
+        padding:0% 10%;
+        display: flex;
+        flex-direction: row;
+        width: 100px;
+        gap: 15px;
+    }
+
+    .who_iam_scroll--box-active img {
+        background-color: var(--aqua-default);
+        padding: 3%;
+        border-radius: 10px;
+    }
 }

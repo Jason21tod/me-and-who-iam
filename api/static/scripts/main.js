@@ -17,15 +17,14 @@ function turn_menu() {
     console.log('-> menu: ', menu )
     console.log('-> botões: ', button);
     console.log(button_state);
-    if (button_state) {
-        button.style['backgroundColor'] = 'var(--background-color)'
-        my_menu.style['left'] = '-100%'
-        button_state = false;
-    } else if (button_state == false) {
-        button.style['backgroundColor'] = 'var(--blue-default)'
-        my_menu.style['left'] = '0%'
-        button_state = true;
-    }
+    if (screen.width <= 400) 
+        if (button_state) {
+            my_menu.style['left'] = '-100%'
+            button_state = false;
+        } else if (button_state == false) {
+            my_menu.style['left'] = '0%'
+            button_state = true;
+        }
 };
 
 
