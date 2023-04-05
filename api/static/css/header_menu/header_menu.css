@@ -1,11 +1,11 @@
-@media screen and (max-width:1440px) {
+@media screen and (max-width:1920px) {
     .header_menu {
         display: flex;
         position: fixed;
         background-color: transparent;
         width: 100vw;
         height: 20vh;
-        z-index: 4;
+        z-index: 1;
         flex-direction: row;
         justify-content: space-around;
         transition: 1.5s;

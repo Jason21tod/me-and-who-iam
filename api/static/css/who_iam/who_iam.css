@@ -1,4 +1,4 @@
-@media screen and (max-width:1440px){
+@media screen and (max-width:1920px){
     #who_iam {
         margin-top: 10%;
         align-items: center;
@@ -9,6 +9,7 @@
         overflow-x: visible;
         align-items: center;
         justify-content: center;
+        z-index: 2;
     }
 
     .container {
