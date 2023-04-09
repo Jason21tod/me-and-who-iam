@@ -5,15 +5,22 @@
         border: none;
         display: flex;
         flex-direction: column;
-        height: 150vh;
+        height: 140vh;
         overflow-x: visible;
         align-items: center;
         justify-content: center;
         z-index: 2;
     }
 
+    .who_i_am--tittle {
+        margin-bottom: 5%;
+        align-self: start;
+        margin-left: 10%;
+        font-size: 2em;
+    }
+
     .container {
-        border-radius: 2%;
+        border-radius: 150q;
     }
 
     #profile_container {
@@ -46,6 +53,7 @@
         width:100%;
         justify-content: space-around;
         gap: 5%;
+        overflow-y: visible;
     }
 
     .who_iam_scroll--box-active {
@@ -55,6 +63,11 @@
         flex-direction: column;
         width: 100px;
         gap: 15px;
+        transition: 1s;
+    }
+
+    .who_iam_scroll--box-active:hover {
+        transform: scale(1.1);
     }
 
     .who_iam_scroll--box-active img {
@@ -77,6 +90,16 @@
         justify-content: center;
     }
 
+    .who_i_am--tittle {
+        margin-bottom: 5%;
+        align-self: center;
+        margin-left: 0%;
+    }
+
+    .container {
+        border-radius: 2%;
+    }
+
     #profile_container {
         background: var(--blue-default);
         padding: 8%;
@@ -95,6 +118,7 @@
 
     .who_iam_scroll {
         display: flex;
+        position: relative;
         height: 15%;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -109,6 +133,7 @@
     }
 
     .who_iam_scroll--box-active {
+        position: static;
         text-align: left;
         padding:0% 10%;
         display: flex;

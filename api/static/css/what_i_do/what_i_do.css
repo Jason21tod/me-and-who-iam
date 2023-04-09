@@ -5,14 +5,20 @@
         justify-content: center;
         text-align: justify;
         align-items: center;
-        margin-top: 40%;
+        margin-top: 30%;
         padding: 0% 7%;
-        height: 170vh;
-        
+        height: 100vh;  
+    }
+
+    .what_i_do--tittle {
+        font-size: 1.7em;
     }
 
     #what_i_do legend {
-        padding: 0% 20%;
+        margin: 0% 20%;
+        padding: 5%;
+        border-radius: 15px;
+        background-color: var(--blue-default);
     }
 
 
@@ -26,7 +32,7 @@
     }
 
     .what_i_do--solution {
-        text-align: right;
+        text-align: left;
         width: 70%;
         display: none;
     }
@@ -49,6 +55,7 @@
         padding: 2%;
         border: none;
         border-radius: 10%;
+        font-weight: 400;
     }
 
     #what_i_do--button_bar button:active {
@@ -63,14 +70,21 @@
         justify-content: center;
         text-align: justify;
         align-items: center;
-        margin-top: 40%;
+        margin-top: 100%;
         padding: 0% 7%;
         height: 100vh;
     }
 
+    .what_i_do--tittle {
+        font-size: 1.7em;
+    }
+
     
     #what_i_do legend {
-        padding: 0% 0%;
+        margin: 0% 2%;
+        padding: 10%;
+        border-radius: 15px;
+        background-color: var(--blue-default);
     }
 
 

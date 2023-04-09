@@ -1,6 +1,6 @@
 @media screen and (max-width:1920px){
     #skills_and_projects{
-        margin-top: 15%;
+        margin-top: 25%;
         display: flex;
         height: 100vh;
         flex-direction: column;
@@ -45,7 +45,7 @@
 
 @media screen and (max-width:420px){
     #skills_and_projects{
-        margin-top: 35%;
+        margin-top: 75%;
         display: flex;
         height: 100vh;
         flex-direction: column;
