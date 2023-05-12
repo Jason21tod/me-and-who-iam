@@ -74,10 +74,9 @@ def send(server, message:MIMEMultipart):
     server.quit()
     app.logger.info('Prontinho, email enviado...')
 
-def run_app():
+def run():
     return app
 
-run_app()
 
 if __name__ == '__main__':
     app.run(debug=True)
