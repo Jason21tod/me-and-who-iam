@@ -57,7 +57,7 @@ def send_invitation(form_post: ImmutableMultiDict):
     
 
 def auth():
-    # Autenticando e enviando email
+    """Autentica e envia o email"""
     app.logger.info('Autenticando...')
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
@@ -67,6 +67,7 @@ def auth():
     
 
 def send(server, message:MIMEMultipart):
+    """Envia o email"""
     app.logger.info('Enviando email...')
     text = message.as_string()
     server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, text)
