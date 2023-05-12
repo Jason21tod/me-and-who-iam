@@ -76,7 +76,8 @@ def send(server, message:MIMEMultipart):
 
 def run_app():
     return app
-    
+
+app.run()
 
 if __name__ == '__main__':
     app.run(debug=True)
