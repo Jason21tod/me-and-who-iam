@@ -1,0 +1,81 @@
+:root {
+    --background-color: #000018;
+    --text-font: 'Kdam Thmor Pro', sans-serif;
+    --aqua-default: #aff0ff;
+    --blue-default: #151A3F;
+}
+
+@media screen and (max-width:420px){
+    .menu_button {
+    background-color: transparent;
+    background-image: url('../imgs/menu.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    display: inline-block;
+    height: 7%;
+    position: fixed;
+    padding: 3%;
+    margin-top: 4%;
+    margin-left: 4%;
+    width: 20%;
+    z-index: 4;
+    }
+}
+
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0% 5%;
+    border-radius: 5%;
+    padding: 3%;
+}
+
+.common_text {
+    color: var(--aqua-default);
+}
+
+h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 15%;
+}
+
+body {
+    background-color: #000018;
+    background: linear-gradient(var(--background-color) 80%, var(--blue-default));
+    font-family: var(--text-font);
+    word-spacing: 10%;
+    line-height: 165%;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+p {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes timming_apears {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}

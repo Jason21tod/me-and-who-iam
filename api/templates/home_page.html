@@ -1,135 +1,172 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/home_page/header_container.css">
-    <link rel="stylesheet" href="../static/styles/home_page/main_container.css">
-    <link rel="stylesheet" href="../static/styles/home_page/projects_box.css">
-    <link rel="stylesheet" href="../static/styles/home_page/footer_container.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/22fdd1afad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/front_page/front_page.css">
+    <link rel="stylesheet" href="../static/css/header_menu/header_menu.css">
+    <link rel="stylesheet" href="../static/css/who_iam/who_iam.css">
+    <link rel="stylesheet" href="../static/css/what_i_do/what_i_do.css">
+    <link rel="stylesheet" href="../static/css/skills_and_projects/skills_and_projects.css">
+    <link rel="stylesheet" href="../static/css/lets_work_together/lets_work_together.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
 
-
-    <title>Gian Pereira (Jason)</title>
+    <title>Jason Developer</title>
 </head>
 <body>
-    <h1>Jason</h1>
-    <header class="header_container">
-        <div class="header_container-box">
-            <img src="../static/imgs/profile1.jpg" alt="Eu, se estiver sem foto é porque o criador do portifolio não colocou nenhuma ainda">
-        </div>
-        <div id="legend_column">
-            <div class="legend_container-box">
-                <p>Precisa de uma solução ? Estou a seu dispôr</p>
-            </div>
-            <nav class="contact_box">
-                <a target="_blank" rel="external" href="https://www.facebook.com/GianPereiraDeveloper/"><i id="facebook_icon" class="fa-brands fa-facebook fa-2x" ></i></a>
-                <a target="_blank" rel="external" href="https://www.linkedin.com/in/gian-pereira-595b48205/"><i id="linkedin_icon" class="fa-brands fa-linkedin fa-2x"></i></a>
-                <a target="_blank" rel="external" href="https://github.com/Jason21tod"><i id="github_icon" class="fa-brands fa-github fa-2x"></i></a>
-                <span class="shine"></span>
-            </nav>
+    <header class="header_menu"> 
+        <nav class="header_menu--navigation">
+            <a href="#who_iam" onclick="turn_menu()">Quem sou eu</a>
+            <a href="#what_i_do" onclick="turn_menu()">O que eu faço</a>
+            <a href="#skills_and_projects" onclick="turn_menu()">Skills e projetos</a>
+            <a href="#lets_work_together" onclick="turn_menu()">Vamos trabalhar juntos ?</a>
+        </nav>
+        <div class="social_medias">
+            <a href="https://www.linkedin.com/in/gian-pereira-595b48205/">
+                <img src="../static/imgs/linkedin-celphone.png" alt="Linkedin">
+            </a>
+            
+            <a href="https://www.facebook.com/gian.pereira.3705/">
+                <img src="../static/imgs/facebook-celphone.png" alt="facebook">
+            </a>
+            
+            <a href="https://github.com/Jason21tod">
+                <img src="../static/imgs/github-celphonr.png" alt="github">
+            </a>
         </div>
     </header>
-
+    
     <main>
-        <section class="main_container">
-            <h2 class="main_container-tittle">Eu e Quem sou</h2>
-            <p class="main_container-paragraph">
-                Olá ! me chamo Gian Pereira Nunes, tenho 20 anos 
-                ( no momento em que escrevi esse texto), estudante de 
-                programação desde os meus 15 anos mas ferrenho nessa
-                prática á um ano, dentro desse periodo desenvolvi 
-                diversas habilidades.  
-            </p>
-            <p class="main_container-paragraph">
-                Atualmente, tenho algumas experiências em desenvolvimento
-                web, principalmente na área de backend. Grande parte dessas
-                experiências vieram do meu projeto para o Clara Resorts, entretanto,
-                estou sempre me aprimorando.
-            </p>
-            <p class="main_container-paragraph">
-               Meu atual objetivo é engressar nessa área, seja como freelancer,
-               seja empresárial. Quero adiquirir experiência e ajudar cada vez mais,
-               me tornando um desenvolvedor cada vez melhor.
-            </p>
-            <nav class="contact_box">
-                <a target="_blank" rel="external" href="https://www.facebook.com/GianPereiraDeveloper/"><i id="facebook_icon" class="fa-brands fa-facebook fa-2x" ></i></a>
-                <a target="_blank" rel="external" href="https://www.linkedin.com/in/gian-pereira-595b48205/"><i id="linkedin_icon" class="fa-brands fa-linkedin fa-2x"></i></a>
-                <a target="_blank" rel="external" href="https://github.com/Jason21tod"><i id="github_icon" class="fa-brands fa-github fa-2x"></i></a>
-            </nav>
+        <button class="menu_button" onclick="turn_menu()"></button>
+        <section id="front_page">
+            <h1 class="front_page_title">Jason Developer</h1>
+            <p class="front_page_legend">Vamos desenvolver seu universo ?</p>
         </section>
 
-        <section class="projects_box">
-            <h2 class="main_container-tittle">Projetos</h2>
-            <p class="main_container-paragraph">Projetos de niveis variados mas que eu aprendi diversas coisas</p>
+        <section id="who_iam">
+            <h2 class="who_i_am--tittle">Quem sou eu</h2>
+            <div id="profile_container" class="container">
+                <img id="profile_image" src="../static/imgs/gian_pereira_celhpone.jpg" alt="Eu mesmo">
+                <legend class="common_text">
+                    Olá meu nome é Gian Pereira Nunes e sou atualmente,
+                    estudante de programação, atualmente migrando para ser fullstack.
+                    Venho estudando técnologia desde os meus 15 anos de idade, porém,
+                    mergulhei na programação quando consegui meu curso na Alura, a partir
+                    daí tracei meus planos para tornar Freelancer nessa área.
+                     Desde então, busquei oportunidades, até que adquiri minha primeira em
+                    uma empresa real: O Ibiuna Clara Resorts. Desde então, venho desenvolvendo
+                    soluções de automação empresarial de diversos tamanhos.
+                </legend>
+            </div>
+            <div class="who_iam_scroll" onscroll="verify_scroll()">
+                <span class="who_iam_scroll--box-active" >
+                    <img src="../static/imgs/computer-celphone.png" alt="automações web">
+                    <legend>Desenvolvedor de sistemas web</legend>
+                </span>
+                 
+                <span class="who_iam_scroll--box-active">
+                    <img src="../static/imgs/architecture-celphone.png" alt="Arquitetura de software">
+                    <legend>metodologias profissionais</legend>
+                </span>
 
-            <nav class="project_box-navigation">
-                <div class="project_box-item-box" id="jason_box" onclick="alter_box_description('jason_box', 'jason_description-legend')">
-                    <i>
-                        <img src="../static/imgs/jason.png" alt="jason logo">
-                    </i>
-                </div>
-                <div class="project_box-item-box" id="me_and_who_iam_description" onclick= "alter_box_description('me_and_who_iam_description', 'me_and_who_iam_description-legend')">
-                    <i>Meandwhoi</i>
-                </div>
-                <div> Em breve</div>
-            </nav>
-            <div class="project_description_box">
-                <div class="project_description_box" id="jason_description-legend">
-                    <h2>Jason Wpp Bot</h2>
-                    <p>
-                        Jason é um sistema web criado para o Clara
-                        Resorts que integra diferentes skills como:
-                    </p>
-                    <ul class="list_of_profits">
-                        <li>Criação de chatbots usando APIs do whatsapp;</li>
-                        <li>Obtenção de dados de cadastro e armazenamento;</li>
-                        <li>Integração contínua e conceitos de arquitetura de software;</li>
-                    </ul>
-                    <a href="jason_bot.html">Saca só </a>
-                </div>
-                <div class="project_description_box" id="me_and_who_iam_description-legend">
-                    <h2>Me and who iam</h2>
-                    <legend>
-                        Me and who iam é nome do projeto deste portifólio, e justamente oq
-                        nome diz: Uma forma de dizer "Eu e quem eu sou". A ideia nasceu da 
-                        base de que todos somos varias coisas, varios estados de nós mesmos.
-                        No instante que pensei nisso, pensei em fazer desse portifólio o local
-                        onde pude ver minha constante evolução na minha maior dificuldade: 
-                        o frontend, aqui você também pode acompanhar a minha evolução
-                    </legend>
-                    
-                </div>
+                <span  class="who_iam_scroll--box-active">
+                    <img src="../static/imgs/techno-solutions-celphone.png" alt="Soluções reais, para problemas reais">
+                    <legend>Soluções reais</legend>
+                </span>
+                
+                <span  class="who_iam_scroll--box-active">
+                    <img src="../static/imgs/web-automation-celphone.png" alt="Automações e bots web">
+                    <legend>Bots e automações</legend>
+                </span  class="who_iam_scroll--box-inactive">
             </div>
         </section>
 
-        <footer class="footer_container">
-            <p id="footer_paraphrase">Vamos trabalhar juntos para construir seus objetivos ?</p>
-            <nav class="contact_box">
-                <a target="_blank" rel="external" href="https://www.facebook.com/GianPereiraDeveloper/"><i id="facebook_icon" class="fa-brands fa-facebook fa-2x" ></i></a>
-                <a target="_blank" rel="external" href="https://www.linkedin.com/in/gian-pereira-595b48205/"><i id="linkedin_icon" class="fa-brands fa-linkedin fa-2x"></i></a>
-                <a target="_blank" rel="external" href="https://github.com/Jason21tod"><i id="github_icon" class="fa-brands fa-github fa-2x"></i></a>
-            </nav>
-            <p id="footer_credits"> &copy;Desenvolvido e idealizado por Gian Pereira Nunes</p>
-        </footer>
+        <section id="what_i_do">
+        
+            <h2 class="what_i_do--tittle">O que eu faço</h2>
+            <legend class="common_text">
+                Atualmente, mantenho um sistema que desenvolvi para o Ibiúna Clara Resorts,
+                um dos maiores hotéis da america latina. Projeto esse, que surgiu de maneira
+                curiosa e que me fez além de aprender mais sobre tecnologia, desenvolver 
+                expertises e softskills para o mercado de trabalho.
+            </legend>
+            <div id="what_i_do--button_bar">
+                <button onclick="toggle_problem_description()">O problema / Solução</button>
+            </div>
+
+            <h3 class="what_i_do--problem">O problema era o seguinte...</h3>
+            <p class="what_i_do--paragraph what_i_do--problem">
+                Eu trabalho no setor da monitoria atualmente, e tinhamos uma situação onde
+                eu e meus colegas de trabalho nos habituamos. Faziamos uma listagem de crianças
+                do hotel com papel, no qual o hóspede inseria as informações da criança e nós,
+                ao fim de tudo, tinhamos que mandar a listagem de todas as crianças no whatsapp
+                para que todos da equipe ficassem cientes. Foi então que digitalizamos tudo.
+            </p>
+
+            <h3 class="what_i_do--solution"> Minha solução foi...</h3>
+            <p  class="what_i_do--paragraph what_i_do--solution">
+                Agora, o sistema é digital, o cadastro é feito de forma digital, no conforto do
+                hóspede. Nossa equipe consegue fazer a consulta desses dados em tempo real; Por
+                meio do whatsapp e um painel administrativo; O dados podem ser usados para fazer
+                predições estatisticas para ajudar em planejamento.
+            </p>
+        
+        </section>
+        
+        <section id="skills_and_projects">
+            <h2>Skills e projetos</h2>
+            <div class="skills_scroll_bar">
+                <span class="skills_box-projects">
+                    <h3 class="skills_box-project_title">Em breve</h3>
+                    <img class="skills_image" src="#" alt="Este projeto está sendo produzido">
+                    <p>Progresso (0%)</p>
+                </span>
+            </div>
+        </section>
+        
+        <section id="lets_work_together">
+            <h2>Vamos trabalhar juntos ?
+            </h2>
+            <legend class="common_text">Do que você precisa para solucionar seu problema ?</legend>
+            <form class="contact_form" action="/post_info" method="post">
+                <div class="contact_form--contact_data">
+                    <label for="name">Nome:</label><input type="text" name="name" id="name" placeholder="Seu Nome Aqui">
+                    <label for="email">Email:</label><input type="email" name="email" id="email" placeholder="seu_email@endereço">
+                    <label for="celphone">Celular:</label><input type="tel" name="celphone" id="celphone" placeholder="(XX)XXXX-XXXXX">
+                </div>
+                <label id="label_about" for="about">Assunto:<textarea name="about" id="about" cols="38" rows="15"></textarea></label>
+                <input type="submit" name="submit" id="submit">
+            </form>
+        </section>
     </main>
-    <script src="../static/scripts/index.js">
-    </script>
-    <noscript>
-        <style>
-            #me_and_who_iam_description #me_and_who_iam_description-legend {
-                opacity: 100%;
-                background-color: blue;
-                scale: 1.2;
-                display: flex;
-            }
-        </style>
-    </noscript>
+
+    <footer>
+        <p>Ou fale comigo por aqui</p>
+        <div class="social_medias">
+            <a href="https://www.linkedin.com/in/gian-pereira-595b48205/">
+                <img src="../static/imgs/linkedin-celphone.png" alt="Linkedin">
+            </a>
+            <a href="https://www.facebook.com/gian.pereira.3705/">
+                <img src="../static/imgs/facebook-celphone.png" alt="facebook">
+            </a>
+            <a href="https://github.com/Jason21tod">
+                <img src="../static/imgs/github-celphonr.png" alt="github">
+            </a>
+        </div>
+    </footer>
 </body>
+<script src="../static/scripts/main.js">
+</script>
+<noscript>
+    <style>
+        .what_i_do--solution .what_i_do--problem{ display: inline-block;}
+    </style></noscript>
 </html>
