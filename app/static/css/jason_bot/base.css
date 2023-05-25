@@ -1,0 +1,13 @@
+@import url(../base.css);
+
+body {
+    background: linear-gradient(var(--background-color),90%, rgb(12, 12, 136));
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    font-family: var(--text-font);
+    color: var(--aqua-default)
+}
+
+h1, h2 {
+    color: aliceblue;
+}

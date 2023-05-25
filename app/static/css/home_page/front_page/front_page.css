@@ -1,7 +1,7 @@
 @media screen and (max-width:1920px){
     #front_page {
         align-items: right;
-        background-image: url('../../imgs/capa_pc.jpg');
+        background-image: url('../../../imgs/capa_pc.jpg');
         background-repeat: no-repeat;
         background-position: center right;
         background-size: 60%;
@@ -42,7 +42,7 @@
 @media screen and (max-width:420px){
     #front_page {
         align-items: center;
-        background-image: url('../../imgs/capa.jpg');
+        background-image: url('../../../imgs/capa.jpg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 90%;
