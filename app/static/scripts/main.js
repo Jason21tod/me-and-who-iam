@@ -17,7 +17,7 @@ function turn_menu() {
     console.log('-> menu: ', menu )
     console.log('-> botões: ', button);
     console.log(button_state);
-    if (screen.width <= 400) 
+    if (screen.width <= 420) 
         if (button_state) {
             my_menu.style['left'] = '-100%'
             button_state = false;
@@ -30,7 +30,7 @@ function turn_menu() {
 
 let toggle_problem_button = true
 function toggle_problem_description () {
-//     console.log(solution_array[0].style)
+    console.log(solution_array[0].style)
     if (toggle_problem_button) {
         solution_array.forEach((element) => {
             element.style['display'] = 'inline-block'
