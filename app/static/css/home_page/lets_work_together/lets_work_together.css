@@ -65,7 +65,7 @@
     }
 
     .contact_form {
-        background-color: rgb(201, 201, 201);
+        background-color: var(--grey-default);
         display: flex;
         flex-direction: column;
         gap: 2px;
