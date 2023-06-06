@@ -1,6 +1,7 @@
 import smtplib
 import os
 from flask import request, Flask, render_template, redirect
+from msg_handlers import PrimaryMsgReceiver
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from werkzeug.datastructures import ImmutableMultiDict
@@ -23,7 +24,6 @@ def form_post():
 
 @app.route('/bot', methods=['GET', 'POST'])
 def bot_endpoint()-> str:
-    from .msg_handlers import PrimaryMsgReceiver
     msg_receiver = PrimaryMsgReceiver()
     app.logger.info('Going to bot page')
     req = request.values
