@@ -1,7 +1,7 @@
 import smtplib
 import os
 from flask import request, Flask, render_template, redirect
-from msg_handlers import PrimaryMsgReceiver
+from .msg_handlers import PrimaryMsgReceiver
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from werkzeug.datastructures import ImmutableMultiDict
