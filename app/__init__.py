@@ -14,6 +14,10 @@ app = Flask(__name__)
 def home():
     return render_template('home_page.html')
 
+@app.route('/jason_bot.html', methods=['GET'])
+def jason_bot():
+    return render_template('jason_bot.html')
+
 
 @app.route('/post_info', methods=['GET', 'POST'])
 def form_post():
