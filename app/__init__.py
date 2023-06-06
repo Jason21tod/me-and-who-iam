@@ -36,7 +36,7 @@ PASSWORD = os.environ['EMAIL_APP_PASSWORD']
 
 
 def send_invitation(form_post: ImmutableMultiDict):
-    """Lida com as propostas e as envia
+    """Lida com as propostas e as envia para o alvo
     """
     if len(form_post) == 0:
         app.logger.info('sem dados para enviar...')
