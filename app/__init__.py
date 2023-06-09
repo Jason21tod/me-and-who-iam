@@ -1,5 +1,6 @@
 import smtplib
 import os
+import requests
 from flask import request, Flask, render_template, redirect
 from .msg_handlers import PrimaryMsgReceiver
 from email.mime.text import MIMEText
@@ -33,6 +34,14 @@ def bot_endpoint()-> str:
     req = request.values
     return str(msg_receiver.receive_and_response_msg(req))
 
+@app.route('/auth', methods=['GET', 'POST'])
+def auth():
+    req = requests.get("""https://api.instagram.com/oauth/authorize
+    ?client_id={262295793122579}
+    &redirect_uri'={https://jason-todd.herokuapp.com/auth}
+    &scope=user_profile,user_media
+    &response_type=code""")
+    return req.text
 
 SENDER_EMAIL = os.environ['EMAIL_SENDER']
 RECEIVER_EMAIL = os.environ['EMAIL_RECEIVER']
