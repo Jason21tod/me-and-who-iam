@@ -36,7 +36,11 @@ def bot_endpoint()-> str:
 
 @app.route('/auth/', methods=['GET', 'POST'])
 def auth():
-    req = requests.get("""https://api.instagram.com/oauth/authorize/?redirect_uri=https://developers.facebook.com/instagram/token_generator/oauth/&client_id=1659663484497725&response_type=code&scope=user_profile%2Cuser_media&state=%7B"app_id"%3A"1659663484497725"%2C"user_id"%3A"17841458449647297"%2C"nonce"%3A"39EbvseHIc5W2yW8"%7D&logger_id=9f973b4a-57b6-48ef-86b1-32b03eba1df3""")
+    req = requests.get("""https://api.instagram.com/oauth/authorize/?redirect_uri=https://developers.facebook.com/instagram/token_generator/oauth/
+    &client_id=1659663484497725
+    &response_type=code
+    &scope=user_profile,user_media
+    &state=%7B"app_id"%3A"1659663484497725"%2C"user_id"%3A"17841458449647297"%2C"nonce"%3A"39EbvseHIc5W2yW8"%7D&logger_id=9f973b4a-57b6-48ef-86b1-32b03eba1df3""")
     return req.text
 
 SENDER_EMAIL = os.environ['EMAIL_SENDER']
