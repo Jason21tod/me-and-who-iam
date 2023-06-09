@@ -37,8 +37,8 @@ def bot_endpoint()-> str:
 @app.route('/auth/', methods=['GET', 'POST'])
 def auth():
     req = requests.get("""https://api.instagram.com/oauth/authorize
-    ?client_id={1659663484497725}
-    &redirect_uri'={https://jason-todd.herokuapp.com/auth/}
+    ?client_id=1659663484497725
+    &redirect_uri'=https://jason-todd.herokuapp.com/auth/
     &scope=user_profile,user_media
     &response_type=code""")
     return req.text
