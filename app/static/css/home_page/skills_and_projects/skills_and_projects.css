@@ -48,8 +48,8 @@
     }
 
     .skills_image {
-        height: 50%px;
-        width: 50%;
+        height: 30%px;
+        width: 30%;
         color: var(--blue-default)
     }
 
@@ -87,7 +87,7 @@
 
     .skill_box {
         text-align: center;
-        height: 50%;
+        height: 70%;
         width: 40%;
         padding: 5%;
         row-gap: 10%;

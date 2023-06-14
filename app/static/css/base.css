@@ -5,3 +5,7 @@
     --blue-default: #151A3F;
     --grey-default: #c9c9c9;
 }
+
+strong {
+    color: #151A3F;
+}
