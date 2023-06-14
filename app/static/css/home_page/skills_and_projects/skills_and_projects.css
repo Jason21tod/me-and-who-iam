@@ -7,6 +7,12 @@
         justify-content: center;
         align-items: center;
         text-align: justify;
+        background-image: url(../../../imgs/capa-port-darkhole.jpg);
+        background-size: contain;
+        background-clip: border-box;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-clip: padding-box;
     }
 
     #skills_and_projects h2 {

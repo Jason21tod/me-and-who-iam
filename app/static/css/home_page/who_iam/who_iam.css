@@ -9,7 +9,7 @@
         overflow-x: visible;
         align-items: center;
         justify-content: center;
-        z-index: 2;
+        z-index: 0;
     }
 
     .who_i_am--tittle {
@@ -17,10 +17,12 @@
         align-self: start;
         margin-left: 10%;
         font-size: 2em;
+        z-index: 1;
     }
 
     .container {
         border-radius: 150q;
+        z-index: 1;
     }
 
     #profile_container {
@@ -29,6 +31,7 @@
         display: flex;
         flex-direction: row;
         gap: 15px;
+        z-index: 1;
     } 
 
     #profile_image {
