@@ -19,6 +19,7 @@ def bot_endpoint()-> str:
 
 @jason_bot.route('/instagram_auth', methods=['GET', 'POST'])
 def auth():
+    """Autenticação do instagram"""
     current_app.logger.info(request.values.to_dict())
     return current_app.redirect("""https://api.instagram.com/oauth/authorize/?redirect_uri=https://jason-todd.herokuapp.com/jason_bot/callback&client_id=1659663484497725&response_type=code&scope=user_profile,user_media""")
  
