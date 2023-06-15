@@ -21,17 +21,19 @@ def bot_endpoint()-> str:
 def auth():
     """Autenticação do instagram"""
     current_app.logger.info(request.values.to_dict())
-    return current_app.redirect("""https://api.instagram.com/oauth/authorize/?redirect_uri=https://jason-todd.herokuapp.com/jason_bot/callback&client_id=1659663484497725&response_type=code&scope=user_profile,user_media""")
+    return current_app.redirect("""https://api.instagram.com/oauth/authorize/?redirect_uri=https://jason-todd.herokuapp.com/jason_bot/instagram_callback&client_id=1659663484497725&response_type=code&scope=user_profile,user_media""")
  
-@jason_bot.route('/callback')
+@jason_bot.route('/instagram_callback')
 def remake():
     current_app.logger.info(request.values.to_dict())
+    auth_code = request.values.to_dict()['code']
     url = "https://api.instagram.com/oauth/access_token"
     client_id = "1659663484497725"
     client_secret = "bbd2b3d2eca79ca839f29f4d070cff21"
     grant_type = "authorization_code"
     redirect_uri = "https://jason-todd.herokuapp.com/"
-    code = "AQDtoc22IdrjcoFDoxh6UnYjUmUReSSjH7lt8FT-XakFHCu7d_lBrJmO6U8kmDDUh7gTxN8S4o4-p7U4XYNFYV3_A3TGxpoSMiJPX_b8GJ3H8huVRAOOZTjIwrYjlOOAdbjuJxrEnsKD1EUMkbyHFa7RawjifHWzRo5jBJEJNxgygdRGDIlvgNVAnsvRiCRGgLi8rc3_sgC5vWIZ2HLJdNxO85__VpcD78FQ3-6vgGv9Gg"
+    code = auth_code
+
 
     # Faça a solicitação POST
     data = {
@@ -42,10 +44,6 @@ def remake():
         "code": code
     }
     response = requests.post(url, data=data)
-
-    """
-    Jason bot
-    """
 
     return response.text
 
