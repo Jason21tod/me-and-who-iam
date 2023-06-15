@@ -1,8 +1,10 @@
 from flask import Flask, render_template
+from logging import INFO
 
 
 def create_app():
     app = Flask(__name__)
+    app.logger.level = INFO
 
     from .jason_bot import jason_bot
     app.register_blueprint(jason_bot)
