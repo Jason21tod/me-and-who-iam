@@ -45,6 +45,6 @@ def remake():
     }
     response = requests.post(url, data=data)
 
-    return 
+    return render_template('jason_bot.html')
 
 
