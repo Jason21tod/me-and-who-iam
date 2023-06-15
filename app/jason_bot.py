@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, current_app
+from flask import Blueprint, render_template, request, current_app, jsonify
 from .msg_handlers import PrimaryMsgReceiver
 import requests
 
@@ -17,9 +17,10 @@ def bot_endpoint()-> str:
     return str(msg_receiver.receive_and_response_msg(req))
 
 
-@jason_bot.route('/intagram_auth', methods=['GET', 'POST'])
+@jason_bot.route('/instagram_auth', methods=['GET', 'POST'])
 def auth():
-    return current_app.redirect("""https://api.instagram.com/oauth/authorize/?redirect_uri=https://jason-todd.herokuapp.com/&client_id=1659663484497725&response_type=code&scope=user_profile,user_media""")
+    current_app.logger.info(jsonify(request.values))
+    return current_app.redirect("""https://api.instagram.com/oauth/authorize/?redirect_uri=https://jason-todd.herokuapp.com/jason_bot/callback&client_id=1659663484497725&response_type=code&scope=user_profile,user_media""")
  
 @jason_bot.route('/callback')
 def remake():
