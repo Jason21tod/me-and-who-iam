@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 
 
-def create_app(environ, req):
+def create_app():
     app = Flask(__name__)
 
     from .jason_bot import jason_bot
