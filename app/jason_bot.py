@@ -19,11 +19,12 @@ def bot_endpoint()-> str:
 
 @jason_bot.route('/instagram_auth', methods=['GET', 'POST'])
 def auth():
+    current_app.logger.info(request.values.to_dict())
     return current_app.redirect("""https://api.instagram.com/oauth/authorize/?redirect_uri=https://jason-todd.herokuapp.com/jason_bot/callback&client_id=1659663484497725&response_type=code&scope=user_profile,user_media""")
  
 @jason_bot.route('/callback')
 def remake():
-    current_app.logger.info(jsonify(request.values))
+    current_app.logger.info(request.values.to_dict())
     url = "https://api.instagram.com/oauth/access_token"
     client_id = "1659663484497725"
     client_secret = "bbd2b3d2eca79ca839f29f4d070cff21"
