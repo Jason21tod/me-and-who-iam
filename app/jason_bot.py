@@ -31,7 +31,7 @@ def remake():
     client_id = "1659663484497725"
     client_secret = "bbd2b3d2eca79ca839f29f4d070cff21"
     grant_type = "authorization_code"
-    redirect_uri = "https://jason-todd.herokuapp.com/"
+    redirect_uri = "https://jason-todd.herokuapp.com/jason_bot/instagram_callback"
     code = auth_code
 
 
@@ -45,6 +45,6 @@ def remake():
     }
     response = requests.post(url, data=data)
 
-    return response.text
+    return 
 
 
