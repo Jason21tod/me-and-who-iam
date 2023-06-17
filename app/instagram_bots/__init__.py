@@ -11,7 +11,7 @@ URL = "https://api.instagram.com/oauth/access_token"
 CLIENT_ID = "1659663484497725"
 CLIENT_SECRET = "bbd2b3d2eca79ca839f29f4d070cff21"
 GRANT_TYPE = "authorization_code"
-REDIRECT_URI = "https://jason-todd.herokuapp.com/jason_bot/instagram_callback"
+REDIRECT_URI = "https://jason-todd.herokuapp.com/instagram/callback"
 
 
 
@@ -23,7 +23,7 @@ def login():
 def auth():
     """Autenticação do instagram"""
     current_app.logger.info(request.values.to_dict())
-    return current_app.redirect("""https://api.instagram.com/oauth/authorize/?redirect_uri=https://jason-todd.herokuapp.com/jason_bot/instagram_callback&client_id=1659663484497725&response_type=code&scope=user_profile,user_media""")
+    return current_app.redirect(f"https://api.instagram.com/oauth/authorize/?redirect_uri={REDIRECT_URI}&client_id={CLIENT_ID}&response_type=code&scope=user_profile,user_media")
  
 @ig_bot.route('/callback')
 def instagram_callback():
