@@ -1,6 +1,5 @@
-from flask import Blueprint, render_template, request, current_app, jsonify
+from flask import Blueprint, render_template, request, current_app
 from .msg_handlers import PrimaryMsgReceiver
-import requests
 
 jason_bot = Blueprint('jason bot', __name__, url_prefix='/jason_bot')
 
