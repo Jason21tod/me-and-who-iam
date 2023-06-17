@@ -7,6 +7,8 @@ def create_app():
     app.logger.level = INFO
 
     from .jason_bot import jason_bot
+    from .instagram_bots import ig_bot
+    app.register_blueprint(ig_bot)
     app.register_blueprint(jason_bot)
 
     from .email_services import email_service
