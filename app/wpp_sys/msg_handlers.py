@@ -30,7 +30,7 @@ class Container(ABC):
 class Composite(Container):
     """Classe que representa um composite de containeres, ele possui um atributo privado
     chamado de container, onde ele guarda a lista de outros containers ou composites"""
-    _containers: list[Container] = []
+    _containers: list = []
 
     @abstractmethod
     def process_msg(self, request: dict):
@@ -145,6 +145,7 @@ class HelpMsgReceiver(Container):
     Oi ! Precisa de uma ajuda ? 😄
 
     *- tente me cumprimentar*: Eu sei os cumprimentos mais basicos só por enquanto.
+    *- Eu seu fazer analises simples de sites*: Digita "analise urldosite.com". não se esquece de digitar o endereço do site direitinho
     """
 
     def create_msg(self, msg_data):

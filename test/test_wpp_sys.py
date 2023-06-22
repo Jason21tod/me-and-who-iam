@@ -1,6 +1,9 @@
-from app.wpp_sys import FirstMsgReceiver, Container
+from app.wpp_sys import FirstMsgReceiver, Container, ScrapMsgReceiver
 from unittest import TestCase
+from app import create_app
 from typing import Any
+import bs4
+import requests
 
 
 mock_request = dict()
@@ -51,3 +54,60 @@ class TestFirstMsgReceiver(FirstMsgReceiver, TestCase):
         self._containers.pop(0)
 
 
+class TestScrapMsgReceiver(ScrapMsgReceiver, TestCase):
+    url_mock = 'http://jasonuniver.com.br'
+
+    def test_get_data(self):
+        with create_app().app_context():
+            mock_req = {
+                    'ProfileName':'Mock author',
+                    'From': '(XX)XXXXX-XXXX',
+                    'content': 'analise http://jasonuniver.com.br',
+                    'SmsStatus':'status ok'
+                    }
+            print(self.get_data(mock_req))
+
+    def test_get_scrap(self):
+        """Tenta capturar a scrap"""
+        with create_app().app_context():
+            print(self.get_scrap(url=self.url_mock))
+            print(self.get_scrap(url='google.com'))
+            print(self.get_scrap(url='instagram.com'))
+            print(self.get_scrap(url='stackoverflow'))
+
+
+    def test_get_from_url_without_http(self):
+        """Tenta capturar o scrap sem especificar o protocolo de busca"""
+        with create_app().app_context():
+            print(self.get_from_url('jasonuniver.com.br'))
+
+    def test_get_from_url_with_http(self):
+        """Tenta capturar o scrap sem especificar o protocolo de busca"""
+        with create_app().app_context():
+            print(self.get_from_url(url=self.url_mock))
+
+    def test_get_raw_datas(self):
+        """Testa se ele é capaz de obter os dados corretamente"""
+        with create_app().app_context():
+            data_raw = requests.get(self.url_mock)
+            data = bs4.BeautifulSoup(data_raw.text, features='html.parser')
+            print(self.get_raw_datas(data))
+
+    def test_get_strings_from_data(self):
+        """testa se o jason é capaz de obter as strings das tags"""
+        with create_app().app_context():
+            data_raw = requests.get(self.url_mock)
+            data = bs4.BeautifulSoup(data_raw.text, features='html.parser')
+            raw_data = self.get_raw_datas(data)
+            print(self.get_strings_from_datas(raw_data))
+
+    def test_format_links(self):
+        with create_app().app_context():
+            data_raw = requests.get(self.url_mock)
+            data = bs4.BeautifulSoup(data_raw.text, features='html.parser')
+            print(self.format_links(data))
+
+    def test_get_google(self):
+        url = requests.get('http://google.com')
+        scrap_infos = bs4.BeautifulSoup(url.text, features="html.parser")
+        print(scrap_infos)
