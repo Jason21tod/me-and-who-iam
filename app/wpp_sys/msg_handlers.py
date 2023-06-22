@@ -39,7 +39,7 @@ class Composite(Container):
 
 def _format_request_to_msg_dict(request: CombinedMultiDict) -> dict:
     """
-        Formata a mensagem para um dict com somente oque usaremos ao longo de toda a requisção
+        Formata a mensagem para um dict com somente oque usaremos ao longo de toda a requisição
     """
     try:
         request_dict = {
@@ -155,6 +155,9 @@ class HelpMsgReceiver(Container):
             to=msg_data['from'])
 
     def process_msg(self, request: dict):
-        if request['content'].upper() in ['HELP']:
-            self.create_msg(request)
-            return True
+        try:
+            if request['content'].upper() in ['HELP']:
+                self.create_msg(request)
+                return True
+        except:
+            return 'Provavelmente você acessou o endpoint errado, tente acessar pelo whatsapp'

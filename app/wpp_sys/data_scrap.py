@@ -27,13 +27,16 @@ def verify_various_values(various_values: str|list):
 
 class ScrapMsgReceiver(Container):
     def process_msg(self, request: dict):
-        if  'ANALISE' in request['content'].upper() or 'ANÁLISE' in request['content'].upper():
-            current_app.logger.info('Scrap command activated.')
-            request['content'] =request['content'].strip()
-            self.create_msg(request)
-            current_app.logger.info('Scrap MSG send')
-            return True
-        
+        try:
+            if  'ANALISE' in request['content'].upper() or 'ANÁLISE' in request['content'].upper():
+                current_app.logger.info('Scrap command activated.')
+                request['content'] =request['content'].strip()
+                self.create_msg(request)
+                current_app.logger.info('Scrap MSG send')
+                return True
+        except:
+            return 'Você provavelmente ta tentando se comunicar com o jason bot, mas tenta acessar ele pelo whatsapp, funciona la'
+
     def create_msg(self, request):
         data = self.get_data(request)
         if 'error' in data:
