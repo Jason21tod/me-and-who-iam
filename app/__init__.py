@@ -1,10 +1,22 @@
 from flask import Flask, render_template
 from logging import INFO
+from flask_cors import CORS
+import secrets 
 
 
 def create_app():
     app = Flask(__name__)
+    cors = CORS(app)
     app.logger.level = INFO
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///jason.db'
+
+    app.secret_key = secrets.token_hex(50)
+    print(app.secret_key)
+
+    with app.app_context():
+        from .db import db
+        db.init_app(app)
+        db.create_all()
 
     from .jason_bot import jason_bot
     app.register_blueprint(jason_bot)
@@ -21,4 +33,4 @@ def create_app():
 
 
 if __name__ == '__main__':
-    create_app.run(debug=True)
+    create_app().run(debug=True)

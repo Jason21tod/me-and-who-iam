@@ -137,6 +137,3 @@ Verifica também, se esse site n tem nenhum tipo de autenticação, como um site
             return links
         except:
             return 'Não foi possivel obter os links'
-
-# requests.exceptions.ConnectionError
-            

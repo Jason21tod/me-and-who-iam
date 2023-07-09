@@ -5,6 +5,7 @@ from twilio.rest import Client
 from logging import info
 import os
 from typing import Any
+from app import db
 
 
 """
@@ -22,10 +23,13 @@ client = Client(account_sid, auth_token)
 class Container(ABC):
     """Classe que representa um container, ela não tem nenhum comportamento
     necessário, somente uma função para que ela se comporte como um composite"""
+    def __init__(self, name) -> None:
+        super().__init__()
+        self.name = name
+    
     @abstractmethod
     def process_msg(self, request: dict):
         pass
-
 
 class Composite(Container):
     """Classe que representa um composite de containeres, ele possui um atributo privado
@@ -35,6 +39,18 @@ class Composite(Container):
     @abstractmethod
     def process_msg(self, request: dict):
         pass
+
+
+def _register_a_conversation(request: dict):
+    """
+    Registra um conversa no banco de dados sqlite, ela desaparece após alguns minutos
+    """
+    db.db.session.add(db.ConversationRegister(
+        name='Joao',
+        number='XX-XXXXXXX'
+        ))
+    db.db.session.commit()
+    db.db.session.close()
 
 
 def _format_request_to_msg_dict(request: CombinedMultiDict) -> dict:
@@ -55,7 +71,7 @@ def _format_request_to_msg_dict(request: CombinedMultiDict) -> dict:
         raise ValueError(f'The value its not the correct for formatation, must be a {CombinedMultiDict.__name__} not {request}')
         
 
-class FirstMsgReceiver(Composite) :
+class FirstMsgReceiver(Composite):
     """
     classe responsável por receber a mensagem em primeira linha, repassar para uma cadeia de containers
     que devolvem a mensagem formatada, ele então a devolve aos seu client, para que o mesmo trabalhe com
@@ -76,6 +92,7 @@ class FirstMsgReceiver(Composite) :
         Executa a request por uma cadeia de childs, containers, aquele que retornar uma resposta,
         diferente de False, terá sua resposta validada
         """
+        _register_a_conversation(request)
         dict_request = _format_request_to_msg_dict(request)
         current_app.logger.info(f'MSG: {dict_request}')
         for child_container in self._containers:
@@ -90,7 +107,6 @@ class FirstMsgReceiver(Composite) :
         self.create_default_error_msg(dict_request)
         return dict_request
     
-
 
 class CumprimentReceiver(Container):
 

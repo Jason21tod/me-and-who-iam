@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input de dados do Jason Bot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/data_input/base.css">
+
+</head>
+<body class="p-2">
+    <header class="container-fluid"><h1>Este é o painel ADM Jason Bot !</h1>
+        <small class="text-body-secondary">A página fictícia para fins fictícios</small>
+    </header>
+    <hr>
+    <main class="container">
+        <p>
+            Vale sempre lembrar: <strong>Jamais vou utilizar
+            nenhuma das suas informações deixadas aqui, elas
+            só serão acessíveis pelo seu número, na sua conversa com o Jason</strong>.
+            Após um tempo,  a conversa será deletada.</p>
+        <p>
+            Você precisa ter iniciado uma conversa com o Jason nas ultimas horas,
+            então entrar com o seu número para vizualisar os dados da sua conversa. 
+        </p>
+        <form class="p-4 container-md" action="save_data">
+            <h2>Login</h2>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="container internal-grid">
+                            <label class="row" for="cel" >
+                                Qual seu número ?
+                                <input type="tel" name="celphone" id="cel" required>
+                                <br>
+                                <small> ( senão n sei com quem estou falando )</small>
+                            </label>
+                            <label class="row" for="name">
+                                Qual seu nome ?
+                                <input type="text" name="name" id="name" required>
+                                <br>
+                                <small> ( Vou te chamar pelo nome que colocar aqui )</small>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img class="jason-img" src="../static/imgs/jason-logo.png" alt="Jason universe logo">
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Cadastrar">
+        </form>
+        <p>Não iniciou uma conversa ainda ? <a href="../jason_bot"><strong>comece por aqui</strong></a></p>
+    </main>
+    <footer>
+        <p class='text-center'>
+            Este site foi desenvolvindo usando bootstrap.
+        </p>
+    </footer>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</html>
