@@ -41,18 +41,6 @@ class Composite(Container):
         pass
 
 
-def _register_a_conversation(request: dict):
-    """
-    Registra um conversa no banco de dados sqlite, ela desaparece após alguns minutos
-    """
-    db.db.session.add(db.ConversationRegister(
-        name='Joao',
-        number='XX-XXXXXXX'
-        ))
-    db.db.session.commit()
-    db.db.session.close()
-
-
 def _format_request_to_msg_dict(request: CombinedMultiDict) -> dict:
     """
         Formata a mensagem para um dict com somente oque usaremos ao longo de toda a requisição
@@ -81,19 +69,13 @@ class FirstMsgReceiver(Composite):
     default_error_msg='Opa, não entendi, pode repetir ? derepente, vê se o comando ta certo 🙃, *Digita um Help*'
     
 
-    def create_default_error_msg(self, msg_data):
-        client.messages.create(
-            body=self.default_error_msg,
-            from_=msg_data['to'],
-            to=msg_data['from'])
-
     def process_msg(self, request: Any) -> dict:
         """
         Executa a request por uma cadeia de childs, containers, aquele que retornar uma resposta,
         diferente de False, terá sua resposta validada
         """
-        _register_a_conversation(request)
         dict_request = _format_request_to_msg_dict(request)
+        self._register_a_conversation(dict_request)
         current_app.logger.info(f'MSG: {dict_request}')
         for child_container in self._containers:
             print(f'executando: {child_container}')
@@ -107,6 +89,34 @@ class FirstMsgReceiver(Composite):
         self.create_default_error_msg(dict_request)
         return dict_request
     
+    def _register_a_conversation(self, request: dict):
+        """
+        Registra um conversa no banco de dados sqlite, ela desaparece após alguns minutos
+        """
+        is_not_in_db = self.verify_is_in_db(request)
+        print(is_not_in_db)
+        if is_not_in_db:
+            db.db.session.add(db.ConversationRegister(
+                name=request['profile_name'],
+                identification=request['from']
+                ))
+            db.db.session.commit()
+            db.db.session.close()
+        else:
+            current_app.logger.info('Conversa já registrada no banco de dados, não foi salva')
+    
+    def verify_is_in_db(self, request_values):
+        current_app.logger.info('Verificando conversas salvas...')
+        registers = db.ConversationRegister.query.filter_by(identification=request_values['from']).all()
+        current_app.logger.info(f'Conversas encontradas: {registers}')
+        is_not_in_db = len(registers) <= 0
+        return is_not_in_db
+
+    def create_default_error_msg(self, msg_data):
+        client.messages.create(
+            body=self.default_error_msg,
+            from_=msg_data['to'],
+            to=msg_data['from'])
 
 class CumprimentReceiver(Container):
 
