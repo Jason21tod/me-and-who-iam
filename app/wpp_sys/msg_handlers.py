@@ -6,6 +6,7 @@ from logging import info
 import os
 from typing import Any
 from app import db
+import json
 
 
 """
@@ -50,14 +51,31 @@ def _format_request_to_msg_dict(request: CombinedMultiDict) -> dict:
             'profile_name':request.get('ProfileName'),
             'from': request.get('From'),
             'to': request.get('To'),
-            'content': [request.get('Body')],
+            'content': request.get('Body'),
             'status': request.get('SmsStatus')
         }
         info(f'receiving <- {request_dict}')
         return request_dict
     except:
         raise ValueError(f'The value its not the correct for formatation, must be a {CombinedMultiDict.__name__} not {request}')
-        
+
+
+def modify_message_data(message_data):
+    new_data = {
+        'profile_name':message_data['profile_name'],
+        'to':message_data['to'],
+        'content':message_data['content'],
+        'status':message_data['status']}
+    return new_data
+
+def register_data_from_message(message_data):
+    formated_message_data = modify_message_data(message_data=message_data)
+    with open(r'app\wpp_sys\users_chats.json', '+r', encoding='UTF-8') as arq:
+        data: dict = json.load(arq)
+    for item in data:
+        with open(r'app\wpp_sys\users_chats.json', '+w', encoding='UTF-8') as arq:
+            print(item[message_data['from']].append(formated_message_data))
+            json.dump(data, arq, indent=2)
 
 class FirstMsgReceiver(Composite):
     """
@@ -91,13 +109,13 @@ class FirstMsgReceiver(Composite):
         Registra um conversa no banco de dados sqlite, ela desaparece após alguns minutos
         """
         is_not_in_db = self.verify_is_in_list_db(request)
-        print(is_not_in_db)
+        register_data_from_message(request)
         if is_not_in_db:
             db.db.session.add(db.ConversationRegister(
                 name=request['profile_name'],
                 identification=request['from']
                 ))
-            db.db.session. close()
+            db.db.session.close()
         else:
             current_app.logger.info('Conversa já registrada no banco de dados, não foi salva')
     
