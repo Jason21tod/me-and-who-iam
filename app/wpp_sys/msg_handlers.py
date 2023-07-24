@@ -50,7 +50,7 @@ def _format_request_to_msg_dict(request: CombinedMultiDict) -> dict:
             'profile_name':request.get('ProfileName'),
             'from': request.get('From'),
             'to': request.get('To'),
-            'content': request.get('Body'),
+            'content': [request.get('Body')],
             'status': request.get('SmsStatus')
         }
         info(f'receiving <- {request_dict}')
@@ -69,7 +69,7 @@ class FirstMsgReceiver(Composite):
     default_error_msg='Opa, não entendi, pode repetir ? derepente, vê se o comando ta certo 🙃, *Digita um Help*'
     
 
-    def process_msg(self, request: Any) -> dict:
+    def process_msg(self, request: Any):
         """
         Executa a request por uma cadeia de childs, containers, aquele que retornar uma resposta,
         diferente de False, terá sua resposta validada
@@ -85,27 +85,23 @@ class FirstMsgReceiver(Composite):
             elif result != False: 
                 dict_request['content'] = result
                 return dict_request
-        dict_request['content'] = self.default_error_msg
-        self.create_default_error_msg(dict_request)
-        return dict_request
     
     def _register_a_conversation(self, request: dict):
         """
         Registra um conversa no banco de dados sqlite, ela desaparece após alguns minutos
         """
-        is_not_in_db = self.verify_is_in_db(request)
+        is_not_in_db = self.verify_is_in_list_db(request)
         print(is_not_in_db)
         if is_not_in_db:
             db.db.session.add(db.ConversationRegister(
                 name=request['profile_name'],
                 identification=request['from']
                 ))
-            db.db.session.commit()
-            db.db.session.close()
+            db.db.session. close()
         else:
             current_app.logger.info('Conversa já registrada no banco de dados, não foi salva')
     
-    def verify_is_in_db(self, request_values):
+    def verify_is_in_list_db(self, request_values):
         current_app.logger.info('Verificando conversas salvas...')
         registers = db.ConversationRegister.query.filter_by(identification=request_values['from']).all()
         current_app.logger.info(f'Conversas encontradas: {registers}')
