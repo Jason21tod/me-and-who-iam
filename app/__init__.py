@@ -13,11 +13,6 @@ def create_app():
     app.secret_key = secrets.token_hex(50)
     print(app.secret_key)
 
-    with app.app_context():
-        from .db import db
-        db.init_app(app)
-        db.create_all()
-
     from .jason_bot import jason_bot
     app.register_blueprint(jason_bot)
 
