@@ -19,6 +19,8 @@
         margin-bottom: 10%;
     }
 
+
+
     .skills_scroll_bar {
         display: flex;
         margin-top: 5%;
@@ -26,6 +28,7 @@
         height: 40%;
         margin: 5% 0%;
         column-gap: 5%;
+        flex-wrap: nowrap;
     }
 
     .skill_box {
@@ -60,7 +63,7 @@
     }
 
     .skills_box-skills {
-        background-color: var(--blue-default);
+        background-color: transparent;
     }
 }
 
@@ -85,6 +88,10 @@
         padding: 0% 5%;
         height: 30%;
         margin: 10% 0%;
+        flex-wrap: wrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-margin-inline-start: initial;
     }
     
     .skills_scroll_bar p {
