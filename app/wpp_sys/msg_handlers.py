@@ -5,7 +5,6 @@ from twilio.rest import Client
 from logging import info
 import os
 from typing import Any
-from app import db
 import json
 
 
