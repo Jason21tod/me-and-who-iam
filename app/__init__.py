@@ -13,9 +13,6 @@ def create_app():
     app.secret_key = secrets.token_hex(50)
     print(app.secret_key)
 
-    from .jason_bot import jason_bot
-    app.register_blueprint(jason_bot)
-
     from .email_services import email_service
     app.register_blueprint(email_service)
 
