@@ -11,6 +11,13 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///jason.db'
     cors.init_app(app)
 
+    @app.before_request
+    def redirect_to_https():
+        if not request.is_secure and request.headers.get('X-Forwarded-Proto', 'http') != 'https':
+            url = request.url.replace("http://", "https://", 1)
+            return redirect(url, code=301)
+    
+
     app.secret_key = secrets.token_hex(50)
     print(app.secret_key)
 
@@ -18,12 +25,7 @@ def create_app():
     app.register_blueprint(email_service)
 
 
-    @app.before_request
-    def redirect_to_https():
-        if not request.is_secure and request.headers.get('X-Forwarded-Proto', 'http') != 'https':
-            url = request.url.replace("http://", "https://", 1)
-            return redirect(url, code=301)
-    
+
     @app.route('/', methods=['GET', 'POST'])
     def home():
         return render_template('home_page.html')
