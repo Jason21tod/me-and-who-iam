@@ -16,10 +16,6 @@ def create_app():
         if request.host == 'jasonuniverse.com.br':
             url = request.url.replace('jasonuniverse.com.br', 'www.jasonuniverse.com.br', 1)
             return redirect(url, code=301)
-
-
-    @app.before_request
-    def redirect_to_https():
         if not request.is_secure and request.headers.get('X-Forwarded-Proto', 'http') != 'https':
             url = request.url.replace("http://", "https://", 1)
             return redirect(url, code=301)
