@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from logging import INFO
 from flask_cors import CORS
 import secrets 
@@ -18,6 +18,12 @@ def create_app():
     app.register_blueprint(email_service)
 
 
+    @app.before_request
+    def redirect_to_https():
+        if not request.is_secure and request.headers.get('X-Forwarded-Proto', 'http') != 'https':
+            url = request.url.replace("http://", "https://", 1)
+            return redirect(url, code=301)
+    
     @app.route('/', methods=['GET', 'POST'])
     def home():
         return render_template('home_page.html')
