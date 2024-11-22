@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 from logging import INFO
 from flask_cors import CORS
 from flask import Flask
-from flask_restful import Resource, Api
+from flask_restful import Api
 from .scrapbot_api.resources.resources import MessagePort
 from flask_cors import CORS
 
@@ -12,7 +12,9 @@ import secrets
 
 def create_app():
     app = Flask(__name__)
-    cors = CORS(app)
+    cors = CORS()
+    api = Api(app)
+
     app.logger.level = INFO
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///jason.db'
     cors.init_app(app)
@@ -32,38 +34,13 @@ def create_app():
 
     from .email_services import email_service
     app.register_blueprint(email_service)
-
-    errors = {
-        'UserAlreadyExistsError': {
-            'message': "A user with that username already exists.",
-            'status': 409,
-        },
-        'ResourceDoesNotExist': {
-            'message': "A resource with that ID no longer exists.",
-            'status': 410,
-            'extra': "Any extra information you want.",
-        },
-        'UnsupportedMediaType': {
-            'message': 'No content supported on our database, please try another type :D',
-            'status': 415
-        }
-
-    }
-
-
-    app = Flask(__name__)
-    CORS(app)
-    api = Api(app, errors=errors)
-
-    class HelloWorld(Resource):
-        """Add a resource of our API"""
-        def get(self):
-            return {'hello': 'world'}
+    from .scrapbot import scrapbot_page
+    app.register_blueprint(scrapbot_page)
 
     api.add_resource(MessagePort, '/message_port')
 
 
-    @app.route('/', methods=['GET', 'POST'])
+    @app.route('/', methods=['GET'])
     def home():
         return render_template('home_page.html')
 
@@ -71,4 +48,6 @@ def create_app():
 
 
 if __name__ == '__main__':
-    create_app().run(debug=True)
+    from werkzeug.serving import make_ssl_devcert
+    make_ssl_devcert('./ssl', host='localhost')  # Gera certificados autoassinados
+    create_app().run(ssl_context=('./ssl.crt', './ssl.key'), debug=True)
