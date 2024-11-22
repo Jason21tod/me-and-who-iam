@@ -1,5 +1,5 @@
 from flask_restful import Resource, reqparse
-from api.common.message_handlers import *
+from ..common.message_handlers import *
 
 
 class MessagePort(Resource):
