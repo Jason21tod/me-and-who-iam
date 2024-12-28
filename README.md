@@ -1,5 +1,3 @@
 # me-and-who-iam
-A website talking about who iam. </br>
-@Jason21tod
 
-Progresso: **EM PRODUÇÃO**
+My portfolio containning all my projects and things that im working on, see.
