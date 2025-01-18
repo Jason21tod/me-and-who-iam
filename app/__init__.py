@@ -6,7 +6,7 @@ from flask_restful import Api
 from .scrapbot_api.resources.resources import MessagePort
 from flask_cors import CORS
 
-
+import os
 import secrets 
 # ESTE CODIGO FOI CRIADO COM BASTANTE RAIVA
 
@@ -19,8 +19,11 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///jason.db'
     cors.init_app(app)
 
+    app.logger.info(f'init app in: {os.getenv("FLASK_ENV")}')
     @app.before_request
     def enforce_www():
+        if os.getenv('FLASK_ENV') == 'development':
+            return
         if request.host == 'jasonuniverse.com.br':
             url = request.url.replace('jasonuniverse.com.br', 'www.jasonuniverse.com.br', 1)
             return redirect(url, code=301)
@@ -43,7 +46,9 @@ def create_app():
     def home():
         return redirect('https://jason-universe.vercel.app/')
     
-
+    @app.route('/is_online', methods=['GET'])
+    def is_online():
+        return {"status": 'Yeah im online :D'}
 
     return app
 
@@ -52,3 +57,4 @@ if __name__ == '__main__':
     from werkzeug.serving import make_ssl_devcert
     make_ssl_devcert('./ssl', host='localhost')
     create_app().run(ssl_context=('./ssl.crt', './ssl.key'), debug=True)
+    create_app().run(debug=True)
