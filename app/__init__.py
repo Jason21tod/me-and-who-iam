@@ -41,12 +41,14 @@ def create_app():
 
     @app.route('/', methods=['GET'])
     def home():
-        return render_template('home_page.html')
+        return redirect('https://jason-universe.vercel.app/')
+    
+
 
     return app
 
 
 if __name__ == '__main__':
     from werkzeug.serving import make_ssl_devcert
-    make_ssl_devcert('./ssl', host='localhost')  # Gera certificados autoassinados
+    make_ssl_devcert('./ssl', host='localhost')
     create_app().run(ssl_context=('./ssl.crt', './ssl.key'), debug=True)
