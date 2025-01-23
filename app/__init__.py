@@ -48,7 +48,7 @@ def create_app():
     
     @app.route('/is_online', methods=['GET'])
     def is_online():
-        return {"status": 'Yeah im online :D'}
+        return {"online": True}
 
     return app
 
