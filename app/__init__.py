@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, request, redirect
 from logging import INFO
 from flask_cors import CORS
 from flask import Flask
@@ -11,8 +11,9 @@ import secrets
 # ESTE CODIGO FOI CRIADO COM BASTANTE RAIVA
 
 def create_app():
-    app = Flask(__name__)
-    cors = CORS()
+    app = Flask(__name__, static_url_path='', static_folder=None)
+    app.url_map.strict_slashes = False
+    cors = CORS(app, resources={r"/*": {"origins": "*"}})
     api = Api(app)
 
     app.logger.level = INFO
@@ -45,7 +46,7 @@ def create_app():
     @app.route('/', methods=['GET'])
     def home():
         return redirect('https://jason-universe.vercel.app/')
-    
+
     @app.route('/is_online', methods=['GET'])
     def is_online():
         return {"online": True}

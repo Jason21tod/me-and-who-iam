@@ -1,8 +1,11 @@
 import os
 import smtplib
+from flask import jsonify
+from flask_cors import CORS
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from werkzeug.datastructures import ImmutableMultiDict
+
 
 
 from flask import Blueprint, request, current_app
@@ -10,14 +13,19 @@ from flask import Blueprint, request, current_app
 
 email_service = Blueprint('email services', __name__, url_prefix='/email_service')
 
-
-@email_service.route('/', methods=['GET', 'POST'])
+@email_service.route('/', methods=['OPTIONS', 'POST'])
 def form_post():
-    """Endpoint para me enviar os emails"""
-    current_app.logger.info(request.form)
-    send_invitation(request.form)
-    return current_app.redirect('/')
+    if request.method == 'OPTIONS':
+        response = jsonify({})
+        response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
+        return response, 200
 
+    # Requisição POST normal
+    data = request.get_json()
+    print(data)
+    send_invitation(data)
+    return jsonify({"status": "success"}), 200
 
 SENDER_EMAIL = os.environ['EMAIL_SENDER']
 RECEIVER_EMAIL = os.environ['EMAIL_RECEIVER']
@@ -34,11 +42,11 @@ def send_invitation(form_post: ImmutableMultiDict):
     message = MIMEMultipart()
     message["From"] = SENDER_EMAIL
     message["To"] = RECEIVER_EMAIL
-    message["Subject"] = f"Proposta de {form_post.get('name')}"
+    message["Subject"] = f"Proposta de {form_post['name']}"
     body = f"""
-    Email:    {form_post.get('email')}
-    Celular: {form_post.get('celphone')}
-    {form_post.get('about')}
+    Email: {form_post['email']}
+    Celular: {form_post['cellphone']}
+    {form_post['about']}
     """
     message.attach(MIMEText(body, "plain", "utf-8"))
     server = auth()
