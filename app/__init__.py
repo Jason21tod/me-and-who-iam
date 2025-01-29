@@ -15,9 +15,10 @@ def create_app():
     app.url_map.strict_slashes = False
     cors = CORS(app, resources={r"/*": {"origins": "*"}})
     api = Api(app)
-
     app.logger.level = INFO
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///jason.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['JASON_DB']
+
+
     cors.init_app(app)
 
     app.logger.info(f'init app in: {os.getenv("FLASK_ENV")}')
@@ -32,13 +33,21 @@ def create_app():
             url = request.url.replace("http://", "https://", 1)
             return redirect(url, code=301)
     
-
     app.secret_key = secrets.token_hex(50)
+    from .database import db
+    from flask_migrate import Migrate
+
+    db.init_app(app)
+    with app.app_context(): 
+        db.create_all()
+        Migrate(app, db)
 
     from .email_services import email_service
     app.register_blueprint(email_service)
     from .scrapbot import scrapbot_page
     app.register_blueprint(scrapbot_page)
+    from .project_exibition import project_exibition
+    app.register_blueprint(project_exibition)
 
     api.add_resource(MessagePort, '/message_port')
 

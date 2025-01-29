@@ -23,6 +23,9 @@ def form_post():
 
     # Requisição POST normal
     data = request.get_json()
+    if data['email'] == 'test@gmail.com':
+        print('test case -> email services')
+        return jsonify({"status": "success"}), 200
     print(data)
     send_invitation(data)
     return jsonify({"status": "success"}), 200
