@@ -8,7 +8,8 @@ db: SQLAlchemy = SQLAlchemy()
 class ProjectsModel(db.Model):
     title = db.Column(db.String, primary_key=False)
     link = db.Column(db.String(4000), primary_key=True, nullable=False)
-    description = db.Column(db.String(800), nullable=False)
+    description_pt = db.Column(db.String(800), nullable=False)
+    description_en = db.Column(db.String(800), nullable=False)
     image_link = db.Column(db.String(4000))
 
 
@@ -17,8 +18,10 @@ class DataHandler():
     def add_project_in_db(self, data):
         current_app.logger.info('Adding new project')
         new_project = self.projects_model(
-            title=data['title'], link=data['link'],
-            description=data['description'], image_link=data['image_link']
+                title=data['title'], link=data['link'],
+                description_en=data['description_en'],
+                description_pt=data['description_pt'],
+                image_link=data['image_link']
             )
         db.session.add(new_project)
         db.session.commit()
@@ -30,7 +33,8 @@ class DataHandler():
             projects_formated.append({
                 'title':project.title,
                 'link': project.link,
-                'description': project.description,
+                'description_en': project.description_en,
+                'description_pt': project.description_pt,
                 'image_link': project.image_link
                 })
         current_app.logger.info(projects_formated)
